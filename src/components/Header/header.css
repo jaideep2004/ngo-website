@@ -1,0 +1,151 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	background-color: #f0dd4d;
+	overflow-x: hidden;
+}
+.header {
+	position: sticky;
+	top: 0px;
+
+	background-color: #22456b;
+	z-index: 999;
+}
+.logo {
+	cursor: pointer;
+	transition: all 0.4s ease;
+	&:hover {
+		scale: 1.06;
+	}
+}
+.logo > img {
+	width: 290px;
+}
+.logo > img {
+	border-radius: 20px;
+}
+.headwrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 30px 10px 30px;
+}
+.links {
+	/* border: 1px solid black; */
+	display: flex;
+	font-size: 18px;
+	font-weight: 600;
+	gap: 35px;
+	align-items: center;
+	justify-content: center;
+}
+
+
+@keyframes rotateShadow {
+	0% {
+		box-shadow: 0px 0px 2px #f0dd4d;
+		/* Initial box shadow */
+	}
+	50% {
+		box-shadow: 2px 0px 0px #f0dd4d; /* Midway box shadow */
+	}
+	100% {
+		box-shadow: 0px 0px 2px #f0dd4d;
+		/* Final box shadow */
+	}
+}
+
+
+.link:hover {
+	animation: rotateShadow 1s infinite; 
+}
+
+.link {
+	/* border: 1px solid black; */
+	cursor: pointer;
+	transition: all 1s ease;
+	/* padding: 5px 6px; */
+	border-radius: 10px;
+	background-color: #22456b;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	/* box-shadow: inset 2px 2px 2px #f0dd4d; */
+
+	&:hover {
+		transform: translateY(-3px);
+	}
+}
+.nlink {
+	cursor: pointer;
+	transition: all 0.5s ease;
+	
+	border-radius: 10px;
+	background-color: #22456b;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	&:hover{
+		text-decoration: underline;
+		text-decoration-color: #f0dd4d;
+	}
+}
+.nlink > a {
+	padding: 5px 26px;
+	text-decoration: none;
+	color: #f0dd4d;
+	
+}
+.link > a {
+	text-decoration: none;
+	color: #f0dd4d;
+	/* border: 1px solid black; */
+	padding: 7px 6px;
+}
+.navsubmenu {
+	border-radius: 10px;
+gap: 6px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center;
+	justify-content: center; */
+	top: 40px;
+	background-color: #22456b;
+	color: #f0dd4d;
+	border: 1px solid #f0dd4d;
+	padding: 10px;
+	transition: all 0.5s ease;
+}
+#contactbtn {
+	background-color: #f0dd4d;
+
+	/* padding: 6px 9px; */
+	border-radius: 8px;
+	transition: none;
+	border: none;
+	box-shadow: none;
+	transform: translateY(0);
+	transition: background-color 0.3s ease;
+	&:hover {
+		background-color: white;
+
+		box-shadow: 2px 2px 2px #f0dd4d;
+	}
+}
+#contactbtn > a {
+	color: #22456b;
+	padding: 6px 12px;
+}
+
+.mobilemenu {
+	display: none;
+}
+#mmenu {
+	display: none;
+}

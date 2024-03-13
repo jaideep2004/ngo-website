@@ -1,0 +1,22 @@
+.actwrapper{
+    padding: 0px 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.acthead{
+    font-size: 21px;
+	color: #22456b;
+	/* margin-left: 100px; */
+    text-align: center;
+}
+.actcon{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.actcon>a{
+    text-decoration: none;
+    color: black;
+}

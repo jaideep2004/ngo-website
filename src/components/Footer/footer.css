@@ -1,0 +1,105 @@
+.footerwrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 30px 20px 10px;
+	background-color: #22456b;
+	/* border-radius: 10px; */
+	border-top: 1px solid gray;
+	margin-top: 40px;
+}
+.footlogo > img {
+	width: 280px;
+	/* height: 100px; */
+}
+
+.leftfoot {
+	flex: 0.7;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.centerfoot {
+	flex: 1.2;
+	padding: 10px;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.footlink {
+	margin-bottom: 7px;
+	transition: all 0.5s ease;
+	&:hover{
+		transform: translateX(8px);
+	}
+}
+.footlink > a {
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	
+	&:hover {
+		color: #f0dd4d;
+		
+	}
+}
+.rightfoot {
+	flex: 1.3;
+	/* padding: 10px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	/* border: 1px solid white; */
+
+	justify-content: start;
+}
+
+.footaddress1>table>tr>td:nth-child(1){
+	font-weight: 600;
+	font-size: 17px;
+	width: 150px;
+	color: white;
+	/* border: 1px solid white; */
+	padding: 5px;
+}
+
+.footaddress1>table>tr>td:nth-child(2){
+	color: white;
+	padding: 5px;
+}
+.footaddress1>table>tr>td:nth-child(2)>a{
+	/* text-decoration: none; */
+	color: #f0dd4d;
+}
+.footaddress1>table>tr>td>i{
+	color: #f0dd4d;
+	margin-right: 10px;
+}
+
+.foottab{
+	/* border: 1px solid white; */
+	font-size: 17px;
+}
+.flink{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.flink>div>a>i{
+	margin: 0px 15px;
+	color: #f0dd4d;
+}
+
+
+.copyrightfoot {
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	
+}

@@ -1,0 +1,100 @@
+body {
+	font-family: "Poppins", sans-serif;
+}
+.idmain {
+    scale: 0.8;
+	width: 400px;
+	border: 2px solid white;
+	/* margin: 60px auto; */
+    border-radius: 5px;
+	/* padding: 3px; */
+}
+.contain {
+	background-color: #f0dd4d;
+}
+
+#logohead > img {
+	margin-top: -10px;
+}
+.container1 {
+	display: flex;
+	/* border: 1px solid black; */
+	align-items: center;
+    background-color: white;
+}
+.topcontainer{
+	display: flex;
+	justify-content: center;
+    background-color: white;
+    align-items: center;
+    /* text-align: center; */
+}
+.topcontainer>img{
+	width: 310px;
+}
+.container2 {
+	text-align: center;
+	width: 130px;
+	/* background-color: white; */
+	/* border: 1px solid red; */
+	margin: 0 auto;
+	font-size: 25px;
+	color: #22456b;
+	font-weight: 600;
+}
+
+.container3 {
+	text-align: center;
+}
+.orangecontainer {
+	/* border: 5px solid white; */
+	/* border-radius: 5px 5px 120px 120px; */
+	background-color: #f0dd4d;
+}
+.bluecontainer {
+    background-color: #22456b;
+    border: 5px solid white;
+    border-radius: 130px 130px 5px 5px;
+}
+.container4 {
+	text-align: center;
+	font-size: 25px;
+	padding-top: 15px;
+	padding-bottom: 7px;
+	color: white;
+    font-weight: 600;
+}
+.design{
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 17px;
+   background-color: #f0dd4d;
+   border: none;
+   border-radius: 10px;
+}
+.container5 {
+	text-align: center;
+    padding-bottom: 10px ;
+}
+.details {
+	padding: 10px;
+	color: white;
+	font-size: 20px;
+	margin: 0 auto;
+	width: 350px;
+	/* border: 1px solid white; */
+}
+.details > div {
+	margin-left: 50px;
+}
+.signature {
+	text-align: right;
+
+	/* border: 1px solid white; */
+}
+.profilecontainer{
+    border: 7px solid white;
+    border-radius: 50%;
+}

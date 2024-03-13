@@ -1,0 +1,16 @@
+
+.memberswrapper{
+    padding: 0px 30px;
+}
+.memhead{
+    font-size: 20px;
+	color: #22456b;
+	/* margin-left: 100px; */
+    text-align: center;
+}
+
+.idcardcon{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
