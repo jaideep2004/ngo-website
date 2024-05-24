@@ -1,26 +1,14 @@
 import React from "react";
 import "./header.css";
 import { Link, NavLink } from "react-router-dom";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Submenu from "./Submenu";
 
 const Header = () => {
 	useEffect(() => {
 		// Scroll to the top when the component mounts
 		window.scrollTo({ top: 0, behavior: "smooth" });
-    }, []);
-	// const [isSubMenuVisible, setSubMenuVisible] = useState(false);
-
-	// const handleHover = () => {
-	// 	setSubMenuVisible(true);
-	// };
-
-	// const handleLeave = () => {
-	// 	setSubMenuVisible(false);
-	// };
-	// const handleLink1Click = () => {
-	// 	setSubMenuVisible(false);
-	// };
+	}, []);
 
 	const [isVisible, setIsVisible] = useState(false);
 
@@ -50,11 +38,12 @@ const Header = () => {
 		<div className='header'>
 			<header>
 				<div className='headwrapper'>
-					<NavLink to="/"><div className='logo'>
-						<img src='./images/logo5.png' alt='' />
-						{/* <img src='./images/logo1.jpeg' alt='' /> */}
-					</div></NavLink>
-					
+					<NavLink to='/'>
+						<div className='logo'>
+							<img src='./images/logo5.png' alt='' />
+							{/* <img src='./images/logo1.jpeg' alt='' /> */}
+						</div>
+					</NavLink>
 
 					<div onClick={handleButtonClick}>
 						{/* <i id='mobilemenuicon' class='fa-solid fa-bars fa-xl' ></i> */}
@@ -64,7 +53,7 @@ const Header = () => {
 								class='fa-solid fa-circle-xmark fa-2xl'
 								data-aos='zoom-in'></i>
 						) : (
-							<div id='mmenu' >
+							<div id='mmenu'>
 								<div></div>
 								<div></div>
 								<div></div>
@@ -122,12 +111,13 @@ const Header = () => {
 								onClick={handleLinkClick}>
 								<div className='optcontain0'>JOIN US</div>
 							</NavLink>
-							<NavLink to='donate' id="mo1" onClick={handleLinkClick} data-aos='zoom-in-down'
-									data-aos-duration='500'>
-								<div
-									
-									
-									>
+							<NavLink
+								to='donate'
+								id='mo1'
+								onClick={handleLinkClick}
+								data-aos='zoom-in-down'
+								data-aos-duration='500'>
+								<div>
 									<div className='optcontain0'>DONATE</div>
 								</div>
 							</NavLink>

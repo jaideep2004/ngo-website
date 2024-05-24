@@ -12,16 +12,21 @@ const Main2 = () => {
 	return (
 		<div>
 			<div className='main2wrapper'>
-				<div className='main2left' data-aos='fade-right'  data-aos-duration="1000">
+			
+				<div className='main2left' data-aos='fade-right'  data-aos-duration="500">
 					<div className='aboutimg'>
-						<img src='./images/about1.jpg' alt='' />
+						<img src='./images/about1.jpg' alt=''  className="image img1"/>
+						<img src='./images/about2.jpg' alt='' className="image img2" />
 					</div>
+					<div className="aboutcircle"  >
+					</div>
+					
 				</div>
-				<div className='main2right'>
+				<div className='main2right'data-aos='fade-up'  data-aos-duration="600">
 					<div className='abouthead'>
 						<h2>About Us</h2></div>
-					<p data-aos='fade-up'  data-aos-duration="1000">
-						LIFE Foundation is a non-Government, non-political, non-profit
+					<p >
+						<span>LIFE Foundation</span> is a non-Government, non-political, non-profit
 						making organization engaged in the field of social development. It
 						was founded by a group of like-minded social activists in the year
 						2014 and registered under the Indian Trusts Registration Act, 1882,

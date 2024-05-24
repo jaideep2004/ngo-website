@@ -8,7 +8,7 @@ body {
 .header {
 	position: sticky;
 	top: 0px;
-
+	/* border: 1px solid white; */
 	background-color: #22456b;
 	z-index: 999;
 }
@@ -40,24 +40,20 @@ body {
 	justify-content: center;
 }
 
-
 @keyframes rotateShadow {
 	0% {
-		box-shadow: 0px 0px 2px #f0dd4d;
-		/* Initial box shadow */
+		box-shadow: inset 0px 1px 4px #f0dd4d;
 	}
 	50% {
-		box-shadow: 2px 0px 0px #f0dd4d; /* Midway box shadow */
+		box-shadow: inset 1px 0px 4px #f0dd4d;
 	}
 	100% {
-		box-shadow: 0px 0px 2px #f0dd4d;
-		/* Final box shadow */
+		box-shadow: inset 0px 1px 4px #f0dd4d;
 	}
 }
 
-
 .link:hover {
-	animation: rotateShadow 1s infinite; 
+	animation: rotateShadow 1s infinite;
 }
 
 .link {
@@ -72,17 +68,17 @@ body {
 	align-items: center;
 	justify-content: center;
 	position: relative;
-
+padding: 0px 3px;
 	/* box-shadow: inset 2px 2px 2px #f0dd4d; */
 
 	&:hover {
-		transform: translateY(-3px);
+		transform: translateY(-4px);
 	}
 }
 .nlink {
 	cursor: pointer;
 	transition: all 0.5s ease;
-	
+
 	border-radius: 10px;
 	background-color: #22456b;
 	display: flex;
@@ -90,7 +86,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	&:hover{
+	&:hover {
 		text-decoration: underline;
 		text-decoration-color: #f0dd4d;
 	}
@@ -99,7 +95,6 @@ body {
 	padding: 5px 26px;
 	text-decoration: none;
 	color: #f0dd4d;
-	
 }
 .link > a {
 	text-decoration: none;
@@ -109,7 +104,7 @@ body {
 }
 .navsubmenu {
 	border-radius: 10px;
-gap: 6px;
+	gap: 6px;
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -123,7 +118,7 @@ gap: 6px;
 	transition: all 0.5s ease;
 }
 #contactbtn {
-	background-color: #f0dd4d;
+	background-color: white;
 
 	/* padding: 6px 9px; */
 	border-radius: 8px;
@@ -131,17 +126,34 @@ gap: 6px;
 	border: none;
 	box-shadow: none;
 	transform: translateY(0);
-	transition: background-color 0.3s ease;
+	transition: all 0.3s ease;
+	animation: donateScale 2s infinite linear;
 	&:hover {
 		background-color: white;
 
-		box-shadow: 2px 2px 2px #f0dd4d;
 	}
 }
 #contactbtn > a {
 	color: #22456b;
 	padding: 6px 12px;
 }
+@keyframes donateScale {
+	0%{
+		scale: 1;
+		box-shadow: inset 0px 2px 5px #f0dd4d;
+		
+	}
+	50%{
+		scale: 1.08;
+		box-shadow: inset 2px 0px 5px #f0dd4d;
+	}
+	100%{
+		scale: 1;
+		box-shadow: inset 0px 2px 5px #f0dd4d;
+	}
+}
+
+
 
 .mobilemenu {
 	display: none;
