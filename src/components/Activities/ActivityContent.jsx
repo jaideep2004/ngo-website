@@ -1,60 +1,52 @@
-
-
-
-// import React from "react";
-// import { useParams } from "react-router-dom";
-
-// const ActivityContent = ({ projects }) => {
-//   const { id } = useParams();
-//   const project = projects.find((p) => p.id === parseInt(id));
-
-//   if (!project) {
-//     return <div>Project not found</div>;
-//   }
-
-//   console.log("Project:", project);
-//   const imageSrc = `/${project.imgsrc}`; // Constructing the relative path
-
-//   return (
-//     <div>
-//       <h2>{project.cardhead}</h2>
-//       <img src={imageSrc} alt={project.cardhead} />
-//       <p>{project.description}</p>
-//     </div>
-//   );
-// };
-
-// export default ActivityContent;
-
 import React from "react";
 import { useParams } from "react-router-dom";
+import "./activities.css";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ActivityContent = ({ projects }) => {
-  const { id } = useParams();
-  const project = projects.find((p) => p.id === parseInt(id));
+	useEffect(() => {
+		// Scroll to the top when the component mounts
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	}, []);
 
-  if (!project) {
-    return <div>Project not found</div>;
-  }
+	useEffect(() => {
+		AOS.init();
+	}, []);
 
-  console.log("Project:", project); // Check if the project object contains the correct imgsrc
+	const { id } = useParams();
+	const project = projects.find((p) => p.id === parseInt(id));
 
-  // Constructing the image source path dynamically
-  const imageSrc = `/${project.imgsrc}`;
+	if (!project) {
+		return <div>Project not found</div>;
+	}
 
-  // Splitting the cardhead into main part and bracketed part
-  const cardheadParts = project.cardhead.split("(");
-  const mainPart = cardheadParts[0].trim(); // Main part before the bracket
-  const bracketPart = cardheadParts[1] ? `(${cardheadParts[1]}` : ''; // Bracket part (if exists)
+	console.log("Project:", project);
 
-  return (
-    <div>
-      <h2>{mainPart}</h2> {/* Display the main part of cardhead */}
-      <h5>{bracketPart}</h5> {/* Display the bracket part of cardhead */}
-      <img src={imageSrc} alt={project.cardhead} />
-      <p>{project.description}</p>
-    </div>
-  );
+	const imageSrc = `/${project.imgsrc}`;
+
+	const cardheadParts = project.cardhead.split("(");
+	const mainPart = cardheadParts[0].trim(); // Main part before the bracket
+	const bracketPart = cardheadParts[1] ? `(${cardheadParts[1]}` : ""; // Bracket part (if exists)
+
+	return (
+		<div className='actwrapper'>
+			<div className='actwrapper1'>
+				<div className='actconhead'>
+					<h2>{mainPart}</h2>
+					<h5>{bracketPart}</h5>
+				</div>
+				<div className='actconimg'>
+					<img src={imageSrc} alt={project.cardhead} />
+				</div>
+			</div>
+
+			<div className='actcondesc'>
+				<p>{project.description}</p>
+			</div>
+		</div>
+	);
 };
 
 export default ActivityContent;

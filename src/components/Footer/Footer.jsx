@@ -80,20 +80,31 @@ const Footer = () => {
 									<a href=''>+91-9417201720</a>
 								</td>
 							</tr>
-							
 						</table>
-						<div className="flink">
-							<div><a href='https://www.instagram.com/life.found.help'>
-										<i class='fa-brands fa-instagram fa-2xl'></i>
-									</a></div>
-							<div><a href='https://www.instagram.com/life.found.help'>
-										<i class='fa-brands fa-facebook fa-2xl'></i>
-									</a></div>
-						
+						<div className='flink'>
+							<div>
+								<a href='https://www.instagram.com/life.found.help'>
+									<i class='fa-brands fa-whatsapp fa-2xl'></i>
+								</a>
+							</div>
+							<div>
+								<a href='https://www.instagram.com/life.found.help'>
+									<i class='fa-brands fa-instagram fa-2xl'></i>
+								</a>
+							</div>
+							<div>
+								<a href='https://www.instagram.com/life.found.help'>
+									<i class='fa-brands fa-facebook fa-2xl'></i>
+								</a>
+							</div>
+							<div>
+								<a href='https://www.instagram.com/life.found.help'>
+									<i class='fa-brands fa-x-twitter fa-2xl'></i>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				
 			</div>
 
 			<div className='copyrightfoot'>© Copyright 2023 LIFE FOUNDATION NGO</div>

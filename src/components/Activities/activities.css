@@ -1,22 +1,66 @@
-.mainact{
-    border: 2px solid black;
+.mainact {
+	/* border: 2px solid black; */
 }
 
-.acthead{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.acthead {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #22456b;
+	font-size: 21px;
 }
 
-.project-grid{
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
+.projectgrid {
+	/* border: 1px solid black; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 60px;
+	flex-wrap: wrap;
+	padding: 20px;
 }
-.project-grid>a{
-    text-decoration: none;
-    color: inherit;
+.projectgrid > a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.actwrapper {
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 10px 140px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: inset 1px 0px 12px #22456b;
+}
+
+.actwrapper1 {
+	/* border: 1px solid black; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	gap: 190px;
+}
+.actconimg > img {
+	width: 460px;
+	border-radius: 10px;
+    box-shadow: 1px 0px 12px black;
+}
+.actconhead {
+	/* border: 1px solid black; */
+	font-size: 19px;
+	padding: 2px;
+}
+.actconimg {
+	/* border: 1px solid black; */
+}
+.actcondesc {
+	/* border: 1px solid black; */
+}
+.actcondesc > p {
+	font-size: 17px;
+	/* text-align: center; */
 }

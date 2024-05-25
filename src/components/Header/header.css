@@ -161,3 +161,32 @@ padding: 0px 3px;
 #mmenu {
 	display: none;
 }
+
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	background: #22456b; /* Muted deep blue */
+	backdrop-filter: blur(10px); /* Adds blur effect */
+	
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background: #f0dd4d; /* Transparent golden yellow */
+	backdrop-filter: blur(10px); /* Adds blur effect */
+	border-radius: 10px;
+	border: 2px solid rgba(34, 69, 107, 0.2); /* Border to match the theme */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background: white; /* Less transparent golden yellow */
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+	background: #f0dd4d; /* Solid golden yellow */
+  }
+  
+  

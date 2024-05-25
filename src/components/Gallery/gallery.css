@@ -1,0 +1,25 @@
+.gallerywrap {
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.galleryhead {
+	font-size: 21px;
+	color: #22456b;
+	display: flex;
+}
+.gallerywrap1 {
+	display: flex;
+	gap: 40px;
+	margin: 10px 50px;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.gallerywrap1 > img {
+	width: 400px;
+    box-shadow: 1px 0px 12px black;
+    
+}

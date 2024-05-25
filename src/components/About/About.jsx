@@ -18,10 +18,7 @@ const About = () => {
 	return (
 		<div>
 			<div className='aboutwrapper'>
-				<div
-					className='abouthead'
-					data-aos='fade-down'
-					data-aos-duration='500'>
+				<div className='abouthead' data-aos='fade-down' data-aos-duration='500'>
 					<h1>About Us</h1>
 				</div>
 				<div className='aboutwrapper1'>
@@ -54,7 +51,6 @@ const About = () => {
 					</div>
 				</div>
 
-				
 				<div className='aboutwrapper2'>
 					<div className='aboutleft2'>
 						<div className='aboutpgimg1'>
