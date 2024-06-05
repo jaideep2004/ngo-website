@@ -128,7 +128,6 @@
 		margin-top: 630px;
 	}
 
-
 	.main3wrapper {
 		overflow-x: hidden;
 		margin-top: 700px;
@@ -212,7 +211,6 @@
 	}
 
 	/* projects */
-	
 
 	/* actcontent */
 	.mainactcon {
@@ -220,18 +218,24 @@
 		margin-left: -115px;
 		margin-right: -115px;
 	}
-
+	.acthead{
+		scale: 0.8;
+	}
 	
+	.actwrapper{
+		flex-direction: column;
+	}
+
 	.actconimg > img {
 		scale: 0.72 1;
 		/* margin-top: -130px; */
 	}
-	.actwrap1{
+	.actwrap1 {
 		flex-direction: column;
 	}
-	.actcondesc{
-		margin-left: 75px;
-		margin-right: 75px;
+	.actcondesc {
+		margin-left: -45px;
+		margin-right: -45px;
 	}
 
 	/* idcard */
