@@ -31,20 +31,35 @@ const ActivityContent = ({ projects }) => {
 	const bracketPart = cardheadParts[1] ? `(${cardheadParts[1]}` : ""; // Bracket part (if exists)
 
 	return (
-		<div className='actwrapper'>
-			<div className='actwrapper1'>
-				<div className='actconhead'>
-					<h2>{mainPart}</h2>
-					<h5>{bracketPart}</h5>
+		<div className='mainactcon'>
+			<div className='actwrapper'>
+				<div className='acthead'>
+					<h1>{mainPart}</h1>
 				</div>
-				<div className='actconimg'>
-					<img src={imageSrc} alt={project.cardhead} />
+				<div className='actwrap1'>
+					<div className='actconimg'>
+						<img src={imageSrc} alt={project.cardhead} />
+					</div>
+					<div className='actcondesc'>
+						<p>{project.description}</p>
+					</div>
 				</div>
 			</div>
-
-			<div className='actcondesc'>
-				<p>{project.description}</p>
-			</div>
+			{/* <div className='actwrapper'>
+				<div className='actwrap2'>
+					<div className='acthead'>
+						<h1>{mainPart}</h1>
+					</div>
+					<div className='actconimg'>
+						<img src={imageSrc} alt={project.cardhead} />
+					</div>
+				</div>
+				<div className='actwrap3'>
+				<div className='actcondesc'>
+						<p>{project.description}</p>
+					</div>
+				</div>
+			</div> */}
 		</div>
 	);
 };

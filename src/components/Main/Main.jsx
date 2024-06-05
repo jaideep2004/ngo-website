@@ -40,34 +40,38 @@ const Main = () => {
 		<div>
 			<div className='mainwrapper'>
 				<div className='leftcont'>
-					<h1 className='herohead' data-aos='fade-down' data-aos-duration='1000'>
+					<h1
+						className='herohead'
+						data-aos='fade-down'
+						data-aos-duration='1000'>
 						Welcome to LIFE FOUNDATION
 					</h1>
-					<TypeAnimation
+					
+					<div className='maindonate'>DONATE</div>
+				</div>
+				<div className="leftcont1">
+				<TypeAnimation
 						
 						className="typecont"
 						sequence={[
-							// Same substring at the start will only be typed out once, initially
+							
 							"Unite for a Better World",
 							2000, // wait 1s before replacing "Mice" with "Hamsters"
 							"Empowering Change, One Step at a Time",
 							2000,
-							"Transforming Lives Through Compassion and Action",
+							"Transforming Lives Through Compassion ",
 							2000,
 						]}
 						wrapper='span'
-						speed={50}
+						speed={40}
 						style={{ fontSize: "2em", display: "inline-block" }}
 						repeat={Infinity}
+						cursor={false}
 					/>
-					<div className="maindonate">
-						DONATE
-					</div>
 				</div>
 
-				<div className='rightcont' >
+				<div className='rightcont'>
 					<Carousel
-						
 						autoPlay={true}
 						showThumbs={false}
 						stopOnHover={true}

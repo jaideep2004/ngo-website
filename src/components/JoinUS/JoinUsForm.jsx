@@ -9,7 +9,7 @@ const JoinUsForm = () => {
 		// Scroll to the top when the component mounts
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	}, []);
-	
+
 	useEffect(() => {
 		AOS.init();
 	}, []);
@@ -89,8 +89,6 @@ const JoinUsForm = () => {
 			</div>
 
 			<div className='joinuswrapper' data-aos='fade-up' data-aos-duration='500'>
-				
-
 				<form onSubmit={handleSubmit} className='joinform'>
 					<div className='formdiv'>
 						<div>
@@ -109,7 +107,7 @@ const JoinUsForm = () => {
 
 					<div className='formdiv'>
 						<div>
-						<label htmlFor='email'>Email:</label>
+							<label htmlFor='email'>Email:</label>
 						</div>
 						<input
 							type='email'
@@ -123,7 +121,7 @@ const JoinUsForm = () => {
 
 					<div className='formdiv'>
 						<div>
-						<label htmlFor='dob'>Date of Birth:</label>
+							<label htmlFor='dob'>Date of Birth:</label>
 						</div>
 						<input
 							type='text'
@@ -139,7 +137,7 @@ const JoinUsForm = () => {
 
 					<div className='formdiv'>
 						<div>
-						<label htmlFor='mobile'>Mobile No:</label>
+							<label htmlFor='mobile'>Mobile No:</label>
 						</div>
 						<input
 							type='tel'
@@ -155,7 +153,7 @@ const JoinUsForm = () => {
 
 					<div className='formdiv'>
 						<div>
-						<label htmlFor='message'>Message:</label>
+							<label htmlFor='message'>Message:</label>
 						</div>
 						<textarea
 							id='message'
@@ -170,29 +168,6 @@ const JoinUsForm = () => {
 					</div>
 				</form>
 			</div>
-
-			{/* <table>
-				<tr>
-					<td><label htmlFor='name'>Name:</label></td>
-					<td>2</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>2</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>2</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>2</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>2</td>
-				</tr>
-			</table> */}
 		</div>
 	);
 };

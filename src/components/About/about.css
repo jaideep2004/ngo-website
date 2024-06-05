@@ -10,15 +10,15 @@
 }
 
 .aboutleft1 {
+	flex: 1.2;
 	/* border: 1px solid black; */
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding: 5px;
 	/* border: 1px solid white; */
 	border-radius: 20px;
-	box-shadow: 3px 3px 3px white;
+	box-shadow: 0px 3px 3px white;
 	transition: all 0.5s ease;
 
 	&:hover {
@@ -27,14 +27,16 @@
 }
 
 .about1con {
+	/* border: 1px solid black; */
 	color: black;
 	font-size: 17px;
-	padding: 5px 10px;
+	padding: 5px 15px;
 	transition: all 1s ease;
 	/* border-radius: 20px; */
 }
 .about1con > p {
 	line-height: 1.7;
+	text-align: justify;
 }
 .aboutpgimg > img {
 	width: 550px;
@@ -68,6 +70,10 @@
 	/* margin-left: 100px; */
 	text-align: center;
 }
+.aboutright1{
+	/* border: 1px solid black; */
+	flex: 1;
+}
 
 /* about2 */
 .aboutwrapper2 {
@@ -78,11 +84,19 @@
 	justify-content: center;
 	gap: 20px;
 }
+.aboutleft2{
+	/* border: 1px solid black; */
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .aboutright2 {
+	flex: 1.2;
 	/* border: 1px solid black; */
 	padding: 5px;
 	border-radius: 20px;
-	box-shadow: 2px 2px 2px white;
+	box-shadow: 0px 3px 3px white;
 	&:hover {
 		animation: aboutAnimate 1s infinite;
 	}
@@ -102,13 +116,14 @@
 }
 
 .about2con {
-	padding: 5px 10px;
+	padding: 5px 15px;
 	font-size: 17px;
 	/* border: 1px solid black; */
 	transition: all 1s ease;
 }
 .about2con > p {
 	line-height: 1.7;
+	text-align: justify;
 }
 
 .vision {

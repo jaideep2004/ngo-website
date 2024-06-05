@@ -1,5 +1,5 @@
 .gallerywrap {
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -20,6 +20,6 @@
 }
 .gallerywrap1 > img {
 	width: 400px;
-    box-shadow: 1px 0px 12px black;
+    box-shadow: 1px 0px 8px #22456b;
     
 }

@@ -83,7 +83,7 @@ const Footer = () => {
 						</table>
 						<div className='flink'>
 							<div>
-								<a href='https://www.instagram.com/life.found.help'>
+								<a href='https://api.whatsapp.com/send?phone=9056661699'>
 									<i class='fa-brands fa-whatsapp fa-2xl'></i>
 								</a>
 							</div>
@@ -92,16 +92,8 @@ const Footer = () => {
 									<i class='fa-brands fa-instagram fa-2xl'></i>
 								</a>
 							</div>
-							<div>
-								<a href='https://www.instagram.com/life.found.help'>
-									<i class='fa-brands fa-facebook fa-2xl'></i>
-								</a>
-							</div>
-							<div>
-								<a href='https://www.instagram.com/life.found.help'>
-									<i class='fa-brands fa-x-twitter fa-2xl'></i>
-								</a>
-							</div>
+							
+							
 						</div>
 					</div>
 				</div>

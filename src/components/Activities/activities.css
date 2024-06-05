@@ -24,43 +24,73 @@
 	color: inherit;
 }
 
+/* activity content */
+
+.mainactcon {
+	padding: 10px 120px;
+	/* border: 1px solid black; */
+}
 .actwrapper {
 	/* border: 1px solid black; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin: 10px 140px;
-	padding: 20px;
+	padding: 30px;
 	border-radius: 10px;
-	box-shadow: inset 1px 0px 12px #22456b;
+	box-shadow: 0px 0px 10px #22456b;
 }
-
-.actwrapper1 {
+.acthead {
 	/* border: 1px solid black; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 20px;
-	gap: 190px;
+	padding: 10px;
+	text-align: center;
+}
+.acthead > h1 {
+	font-size: 40px;
+}
+.actwrap1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
 }
 .actconimg > img {
-	width: 460px;
+	width: 500px;
 	border-radius: 10px;
-    box-shadow: 1px 0px 12px black;
+	box-shadow: 1px 0px 12px black;
 }
-.actconhead {
-	/* border: 1px solid black; */
-	font-size: 19px;
-	padding: 2px;
-}
+
 .actconimg {
 	/* border: 1px solid black; */
 }
+
 .actcondesc {
 	/* border: 1px solid black; */
 }
 .actcondesc > p {
 	font-size: 17px;
+	text-align: justify;
 	/* text-align: center; */
+}
+
+.actwrap2 {
+	/* gap: 30px; */
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: column;
+	flex: 1;
+	/* border: 1px solid black; */
+	padding: 20px;
+}
+.actwrap3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	/* border: 1px solid black; */
+	padding: 40px;
 }
