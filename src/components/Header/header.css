@@ -68,7 +68,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	position: relative;
-padding: 0px 3px;
+	padding: 0px 3px;
 	/* box-shadow: inset 2px 2px 2px #f0dd4d; */
 
 	&:hover {
@@ -129,8 +129,8 @@ padding: 0px 3px;
 	transition: all 0.3s ease;
 	animation: donateScale 2s infinite linear;
 	&:hover {
-		background-color: white;
 
+		background-color: #f0dd4d;
 	}
 }
 #contactbtn > a {
@@ -138,22 +138,19 @@ padding: 0px 3px;
 	padding: 6px 12px;
 }
 @keyframes donateScale {
-	0%{
+	0% {
 		scale: 1;
 		box-shadow: inset 0px 2px 5px #f0dd4d;
-		
 	}
-	50%{
+	50% {
 		scale: 1.08;
 		box-shadow: inset 2px 0px 5px #f0dd4d;
 	}
-	100%{
+	100% {
 		scale: 1;
 		box-shadow: inset 0px 2px 5px #f0dd4d;
 	}
 }
-
-
 
 .mobilemenu {
 	display: none;
@@ -162,31 +159,27 @@ padding: 0px 3px;
 	display: none;
 }
 
-
 /* Custom scrollbar for Webkit browsers */
 ::-webkit-scrollbar {
 	width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
 	background: #22456b; /* Muted deep blue */
 	backdrop-filter: blur(10px); /* Adds blur effect */
-	
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
 	background: #f0dd4d; /* Transparent golden yellow */
 	backdrop-filter: blur(10px); /* Adds blur effect */
 	border-radius: 10px;
 	border: 2px solid rgba(34, 69, 107, 0.2); /* Border to match the theme */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
 	background: white; /* Less transparent golden yellow */
-  }
-  
-  ::-webkit-scrollbar-thumb:active {
+}
+
+::-webkit-scrollbar-thumb:active {
 	background: #f0dd4d; /* Solid golden yellow */
-  }
-  
-  
+}

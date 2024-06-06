@@ -92,6 +92,11 @@ const Footer = () => {
 									<i class='fa-brands fa-instagram fa-2xl'></i>
 								</a>
 							</div>
+							<div>
+								<a href='https://www.instagram.com/life.found.help'>
+									<i class='fa-brands fa-facebook fa-2xl'></i>
+								</a>
+							</div>
 							
 							
 						</div>

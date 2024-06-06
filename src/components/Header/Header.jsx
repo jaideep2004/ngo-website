@@ -125,6 +125,9 @@ const Header = () => {
 					)}
 
 					<div className='links'>
+					<div className='link' id='contactbtn'>
+							<NavLink to='donate'>DONATE</NavLink>
+						</div>
 						<div className='link'>
 							<NavLink to='/'>HOME</NavLink>
 						</div>
@@ -148,9 +151,7 @@ const Header = () => {
 							<NavLink to='joinus'>JOIN US</NavLink>
 						</div>
 
-						<div className='link' id='contactbtn'>
-							<NavLink to='donate'>DONATE</NavLink>
-						</div>
+						
 					</div>
 				</div>
 			</header>
