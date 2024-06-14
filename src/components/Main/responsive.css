@@ -1,12 +1,14 @@
 @media only screen and (max-width: 768px) {
 	body {
 		overflow-x: hidden;
+		/* user-select: none; */
 	}
 	.header {
+		/* border: 2px solid white; */
 		position: sticky;
-		/* top: 15px; */
-		/* top: 0px; */
+
 		z-index: 1000;
+		box-shadow:  0px -2px 2px white;
 	}
 	#mmenu {
 		position: absolute;
@@ -218,11 +220,11 @@
 		margin-left: -115px;
 		margin-right: -115px;
 	}
-	.acthead{
+	.acthead {
 		scale: 0.8;
 	}
-	
-	.actwrapper{
+
+	.actwrapper {
 		flex-direction: column;
 	}
 

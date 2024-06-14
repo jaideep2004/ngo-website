@@ -46,7 +46,7 @@ const Header = () => {
 					</NavLink>
 
 					<div onClick={handleButtonClick}>
-						{/* <i id='mobilemenuicon' class='fa-solid fa-bars fa-xl' ></i> */}
+						
 						{isIconVisible ? (
 							<i
 								id='mmenu2'

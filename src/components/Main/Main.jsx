@@ -17,6 +17,7 @@ import { useState, useEffect } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Main = () => {
 	useEffect(() => {
@@ -46,8 +47,9 @@ const Main = () => {
 						data-aos-duration='1000'>
 						Welcome to LIFE FOUNDATION
 					</h1>
-					
-					<div className='maindonate'>DONATE</div>
+					<Link to="/donate" className="maindonateA">
+						<div className='maindonate'>DONATE</div>
+						</Link>
 				</div>
 				<div className="leftcont1">
 				<TypeAnimation
