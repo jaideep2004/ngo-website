@@ -20,6 +20,8 @@
 	border-radius: 20px;
 	box-shadow: 0px 3px 3px white;
 	transition: all 0.5s ease;
+	background-color: #22456b;
+	color: white;
 
 	&:hover {
 		animation: aboutAnimate 1s infinite;
@@ -33,10 +35,12 @@
 	padding: 5px 15px;
 	transition: all 1s ease;
 	/* border-radius: 20px; */
+	
 }
 .about1con > p {
 	line-height: 1.7;
 	text-align: justify;
+	color: white;
 }
 .aboutpgimg > img {
 	width: 550px;
@@ -92,6 +96,7 @@
 	justify-content: center;
 }
 .aboutright2 {
+	background-color: #22456b;
 	flex: 1.2;
 	/* border: 1px solid black; */
 	padding: 5px;
@@ -124,6 +129,7 @@
 .about2con > p {
 	line-height: 1.7;
 	text-align: justify;
+	color: white;
 }
 
 .vision {
@@ -131,11 +137,15 @@
 	flex-direction: column;
 }
 .visioncon {
+	/* border: 1px solid white; */
 	display: flex;
 	padding: 10px 40px;
 	gap: 40px;
 }
 .visioncon > div {
+	text-align: justify;
+	background-color: #22456b;
+	color: white;
 	cursor: pointer;
 	border: 1px solid #22456b;
 	border-radius: 20px;
@@ -151,5 +161,5 @@
 	}
 }
 .visioncon > div > i {
-	color: #22456b;
+	color: #f0dd4d;
 }

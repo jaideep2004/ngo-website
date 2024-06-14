@@ -80,10 +80,14 @@
 
 .actcondesc {
 	/* border: 1px solid black; */
+	padding: 20px;
+	border-radius: 5px;
+	background-color: #22456b;
 }
 .actcondesc > p {
 	font-size: 17px;
 	text-align: justify;
+	color: white;
 	/* text-align: center; */
 }
 
