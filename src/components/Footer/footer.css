@@ -9,7 +9,7 @@
 }
 .footlogo > img {
 	width: 280px;
-	filter: brightness(130%);
+	/* filter: brightness(130%); */
 	/* height: 100px; */
 }
 

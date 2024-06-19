@@ -15,7 +15,7 @@
 		display: flex;
 		flex-direction: column;
 		cursor: pointer;
-		top: 35px;
+		top: 45px;
 		right: 10px;
 		z-index: 2;
 		transition: all 0.5s ease;
@@ -26,7 +26,7 @@
 		display: flex;
 		flex-direction: column;
 		cursor: pointer;
-		top: 60px;
+		top: 70px;
 		right: 12px;
 		z-index: 2;
 		width: 40px;
@@ -77,8 +77,11 @@
 		display: none;
 	}
 
-	.logo > img {
-		width: 230px;
+	.logo  {
+		margin-left: -30px;
+		/* border: 1px solid white; */
+		scale: 0.8;
+		/* width: 230px; */
 	}
 	.headwrapper {
 		padding: 15px 7px 15px 7px;
@@ -277,7 +280,6 @@
 
 	/* donate */
 	.donatewrap {
-		
 		/* margin-left: -40px; */
 		flex-direction: column;
 	}
@@ -290,11 +292,9 @@
 		margin-top: 20px;
 		scale: 1.06;
 	}
-	
+
 	/* footer */
-.footerwrapper{
-	margin-top: 120px;
-}
-
-
+	.footerwrapper {
+		margin-top: 120px;
+	}
 }

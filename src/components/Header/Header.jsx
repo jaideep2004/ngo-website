@@ -35,60 +35,59 @@ const Header = () => {
 	};
 
 	return (
-	
-			<header className='header'>
-				<div className='headwrapper'>
-				<NavLink to='/' className="logolink">
-						<div className='logo'>
-							<img src='./images/logo8.png' alt='' />
-							<div id="logofc">(FCRA Approved)</div>
-							
-						</div>
-					</NavLink>
-{/* fcra approved */}
-					<div onClick={handleButtonClick}>
-						
-						{isIconVisible ? (
-							<i
-								id='mmenu2'
-								class='fa-solid fa-circle-xmark fa-2xl'
-								data-aos='zoom-in'></i>
-						) : (
-							<div id='mmenu'>
-								<div></div>
-								<div></div>
-								<div></div>
-							</div>
-						)}
+		<header className='header'>
+			<div className='headwrapper'>
+				<NavLink to='/' className='logolink'>
+					<div className='logo'>
+						{/* <img src='./images/logo8.png' alt='' /> */}
+						<img src='./images/logo1.png' alt='' />
+						<img src='./images/logo9.png' alt='' />
 					</div>
+					<div id='logofc'>(FCRA Approved)</div>
+				</NavLink>
+				{/* fcra approved */}
+				<div onClick={handleButtonClick}>
+					{isIconVisible ? (
+						<i
+							id='mmenu2'
+							class='fa-solid fa-circle-xmark fa-2xl'
+							data-aos='zoom-in'></i>
+					) : (
+						<div id='mmenu'>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					)}
+				</div>
 
-					{isVisible && (
-						<div className='mobilemenu'>
-							<NavLink
-								to='/'
-								id='mo1'
-								data-aos='zoom-in-down'
-								// data-aos-duration='500'
-								onClick={handleLinkClick}>
-								<div className='optcontain0'>HOME</div>
-							</NavLink>
-							<NavLink
-								to='about'
-								id='mo1'
-								data-aos='zoom-in-down'
-								// data-aos-duration='500'
-								onClick={handleLinkClick}>
-								<div className='optcontain0'>ABOUT US</div>
-							</NavLink>
-							<NavLink
-								to='activities'
-								id='mo1'
-								data-aos='zoom-in-down'
-								// data-aos-duration='500'
-								onClick={handleLinkClick}>
-								<div className='optcontain0'>PROJECTS</div>
-							</NavLink>
-							{/* <NavLink
+				{isVisible && (
+					<div className='mobilemenu'>
+						<NavLink
+							to='/'
+							id='mo1'
+							data-aos='zoom-in-down'
+							// data-aos-duration='500'
+							onClick={handleLinkClick}>
+							<div className='optcontain0'>HOME</div>
+						</NavLink>
+						<NavLink
+							to='about'
+							id='mo1'
+							data-aos='zoom-in-down'
+							// data-aos-duration='500'
+							onClick={handleLinkClick}>
+							<div className='optcontain0'>ABOUT US</div>
+						</NavLink>
+						<NavLink
+							to='activities'
+							id='mo1'
+							data-aos='zoom-in-down'
+							// data-aos-duration='500'
+							onClick={handleLinkClick}>
+							<div className='optcontain0'>PROJECTS</div>
+						</NavLink>
+						{/* <NavLink
 								to='members'
 								id='mo1'
 								data-aos='zoom-in-down'
@@ -96,67 +95,64 @@ const Header = () => {
 								onClick={handleLinkClick}>
 								<div className='optcontain0'>MEMBERS</div>
 							</NavLink> */}
-							<NavLink
-								to='gallery'
-								id='mo1'
-								data-aos='zoom-in-down'
-								// data-aos-duration='500'
-								onClick={handleLinkClick}>
-								<div className='optcontain0'>ACTIVITIES</div>
-							</NavLink>
-							<NavLink
-								to='joinus'
-								id='mo1'
-								data-aos='zoom-in-down'
-								// data-aos-duration='500'
-								onClick={handleLinkClick}>
-								<div className='optcontain0'>VOLUNTEER</div>
-							</NavLink>
-							<NavLink
-								to='donate'
-								id='mo1'
-								onClick={handleLinkClick}
-								data-aos='zoom-in-down'
-								data-aos-duration='500'>
-								<div>
-									<div className='optcontain0'>DONATE</div>
-								</div>
-							</NavLink>
-						</div>
-					)}
+						<NavLink
+							to='gallery'
+							id='mo1'
+							data-aos='zoom-in-down'
+							// data-aos-duration='500'
+							onClick={handleLinkClick}>
+							<div className='optcontain0'>ACTIVITIES</div>
+						</NavLink>
+						<NavLink
+							to='joinus'
+							id='mo1'
+							data-aos='zoom-in-down'
+							// data-aos-duration='500'
+							onClick={handleLinkClick}>
+							<div className='optcontain0'>VOLUNTEER</div>
+						</NavLink>
+						<NavLink
+							to='donate'
+							id='mo1'
+							onClick={handleLinkClick}
+							data-aos='zoom-in-down'
+							data-aos-duration='500'>
+							<div>
+								<div className='optcontain0'>DONATE</div>
+							</div>
+						</NavLink>
+					</div>
+				)}
 
-					<div className='links'>
+				<div className='links'>
 					<div className='link' id='contactbtn'>
-							<NavLink to='donate'>DONATE</NavLink>
-						</div>
-						<div className='link'>
-							<NavLink to='/'>HOME</NavLink>
-						</div>
+						<NavLink to='donate'>DONATE</NavLink>
+					</div>
+					<div className='link'>
+						<NavLink to='/'>HOME</NavLink>
+					</div>
 
-						<div className='link'>
-							<NavLink to='about'>ABOUT US</NavLink>
-						</div>
+					<div className='link'>
+						<NavLink to='about'>ABOUT US</NavLink>
+					</div>
 
-						<div className='link'>
-							<NavLink to='activities'>PROJECTS</NavLink>
-						</div>
+					<div className='link'>
+						<NavLink to='activities'>PROJECTS</NavLink>
+					</div>
 
-						{/* <div className='link'>
+					{/* <div className='link'>
 							<NavLink to='members'>MEMBERS</NavLink>
 						</div> */}
-						<div className='link'>
-							<NavLink to='gallery'>ACTIVITIES</NavLink>
-						</div>
+					<div className='link'>
+						<NavLink to='gallery'>ACTIVITIES</NavLink>
+					</div>
 
-						<div className='link'>
-							<NavLink to='joinus'>VOLUNTEER</NavLink>
-						</div>
-
-						
+					<div className='link'>
+						<NavLink to='joinus'>VOLUNTEER</NavLink>
 					</div>
 				</div>
-			</header>
-		
+			</div>
+		</header>
 	);
 };
 
