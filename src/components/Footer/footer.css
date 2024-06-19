@@ -2,13 +2,14 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 10px 30px 20px 10px;
-	background-color: #22456b;
+	background-color: #102740;
 	/* border-radius: 10px; */
-	border-top: 1px solid gray;
-	margin-top: 40px;
+	/* border-top: 1px solid gray; */
+	margin-top: 80px;
 }
 .footlogo > img {
 	width: 280px;
+	filter: brightness(130%);
 	/* height: 100px; */
 }
 

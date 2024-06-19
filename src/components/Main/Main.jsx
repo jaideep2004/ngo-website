@@ -81,7 +81,7 @@ const Main = () => {
 						showIndicators={true}
 						showArrows={false}
 						showStatus={false}
-						width={1250}>
+						width={1300}>
 						<div className='carouselimg'>
 							<img src='./images/slide1.jpg' />
 						</div>

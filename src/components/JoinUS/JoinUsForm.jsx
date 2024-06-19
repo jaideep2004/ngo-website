@@ -91,9 +91,7 @@ const JoinUsForm = () => {
 			<div className='joinuswrapper' data-aos='fade-up' data-aos-duration='500'>
 				<form onSubmit={handleSubmit} className='joinform'>
 					<div className='formdiv'>
-						<div>
-							<label htmlFor='name'>Name:</label>
-						</div>
+						<label htmlFor='name'>Name</label>
 
 						<input
 							type='text'
@@ -106,9 +104,7 @@ const JoinUsForm = () => {
 					</div>
 
 					<div className='formdiv'>
-						<div>
-							<label htmlFor='email'>Email:</label>
-						</div>
+						<label htmlFor='email'>Email</label>
 						<input
 							type='email'
 							id='email'
@@ -120,9 +116,8 @@ const JoinUsForm = () => {
 					</div>
 
 					<div className='formdiv'>
-						<div>
-							<label htmlFor='dob'>Date of Birth:</label>
-						</div>
+						<label htmlFor='dob'>Date of Birth</label>
+
 						<input
 							type='text'
 							id='dob'
@@ -136,9 +131,7 @@ const JoinUsForm = () => {
 					</div>
 
 					<div className='formdiv'>
-						<div>
-							<label htmlFor='mobile'>Mobile No:</label>
-						</div>
+						<label htmlFor='mobile'>Mobile No</label>
 						<input
 							type='tel'
 							id='mobile'
@@ -152,9 +145,7 @@ const JoinUsForm = () => {
 					</div>
 
 					<div className='formdiv'>
-						<div>
-							<label htmlFor='message'>Message:</label>
-						</div>
+						<label htmlFor='message'>Message</label>
 						<textarea
 							id='message'
 							name='message'
@@ -162,9 +153,11 @@ const JoinUsForm = () => {
 							onChange={handleChange}
 							required></textarea>
 					</div>
-
-					<div className='formbtn'>
-						<button type='submit'>Submit</button>
+					<div className='formdiv'>
+					<label htmlFor='message'></label>
+						<div className='formbtn'>
+							<button type='submit'>Submit</button>
+						</div>
 					</div>
 				</form>
 			</div>

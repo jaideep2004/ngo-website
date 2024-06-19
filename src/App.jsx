@@ -20,7 +20,7 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Main />} />
 					<Route path='/about' element={<About />} />
-					<Route path='/members' element={<Members />} />
+					{/* <Route path='/members' element={<Members />} /> */}
 					<Route
 						path='/activities'
 						element={<Activities projects={projects} />} // Pass projects as a prop

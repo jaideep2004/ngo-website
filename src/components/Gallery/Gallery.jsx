@@ -17,7 +17,7 @@ const Gallery = () => {
 	return (
 		<div className='gallerywrap'>
 			<div className='galleryhead' data-aos='fade-down' data-aos-duration='500'>
-				<h1>Gallery</h1>
+				<h1>Activities</h1>
 			</div>
 			<div className='gallerywrap1' data-aos='fade-up' data-aos-duration='500'>
 				<img src='./images/at1.jpg' alt='' />

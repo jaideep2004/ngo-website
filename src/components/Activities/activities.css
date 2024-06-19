@@ -6,7 +6,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #22456b;
+	color: #f0dd4d;
 	font-size: 21px;
 }
 
@@ -45,7 +45,7 @@
 	/* border: 1px solid black; */
 	display: flex;
 	/* flex-direction: column; */
-	align-items: center;
+	/* align-items: center; */
 	justify-content: center;
 	padding: 30px;
 	border-radius: 10px;
@@ -79,10 +79,12 @@
 }
 
 .actcondesc {
+	box-shadow: inset 0px 0px 3px #f0dd4d;
 	/* border: 1px solid black; */
 	padding: 20px;
-	border-radius: 5px;
+	border-radius: 10px;
 	background-color: #22456b;
+
 }
 .actcondesc > p {
 	font-size: 17px;

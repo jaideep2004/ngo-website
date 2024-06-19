@@ -35,16 +35,17 @@ const Header = () => {
 	};
 
 	return (
-		<div className='header'>
-			<header>
+	
+			<header className='header'>
 				<div className='headwrapper'>
-					<NavLink to='/'>
+				<NavLink to='/' className="logolink">
 						<div className='logo'>
-							<img src='./images/logo5.png' alt='' />
-							{/* <img src='./images/logo1.jpeg' alt='' /> */}
+							<img src='./images/logo8.png' alt='' />
+							<div id="logofc">(FCRA Approved)</div>
+							
 						</div>
 					</NavLink>
-
+{/* fcra approved */}
 					<div onClick={handleButtonClick}>
 						
 						{isIconVisible ? (
@@ -87,21 +88,21 @@ const Header = () => {
 								onClick={handleLinkClick}>
 								<div className='optcontain0'>PROJECTS</div>
 							</NavLink>
-							<NavLink
+							{/* <NavLink
 								to='members'
 								id='mo1'
 								data-aos='zoom-in-down'
 								// data-aos-duration='500'
 								onClick={handleLinkClick}>
 								<div className='optcontain0'>MEMBERS</div>
-							</NavLink>
+							</NavLink> */}
 							<NavLink
 								to='gallery'
 								id='mo1'
 								data-aos='zoom-in-down'
 								// data-aos-duration='500'
 								onClick={handleLinkClick}>
-								<div className='optcontain0'>GALLERY</div>
+								<div className='optcontain0'>ACTIVITIES</div>
 							</NavLink>
 							<NavLink
 								to='joinus'
@@ -109,7 +110,7 @@ const Header = () => {
 								data-aos='zoom-in-down'
 								// data-aos-duration='500'
 								onClick={handleLinkClick}>
-								<div className='optcontain0'>JOIN US</div>
+								<div className='optcontain0'>VOLUNTEER</div>
 							</NavLink>
 							<NavLink
 								to='donate'
@@ -140,22 +141,22 @@ const Header = () => {
 							<NavLink to='activities'>PROJECTS</NavLink>
 						</div>
 
-						<div className='link'>
+						{/* <div className='link'>
 							<NavLink to='members'>MEMBERS</NavLink>
-						</div>
+						</div> */}
 						<div className='link'>
-							<NavLink to='gallery'>GALLERY</NavLink>
+							<NavLink to='gallery'>ACTIVITIES</NavLink>
 						</div>
 
 						<div className='link'>
-							<NavLink to='joinus'>JOIN US</NavLink>
+							<NavLink to='joinus'>VOLUNTEER</NavLink>
 						</div>
 
 						
 					</div>
 				</div>
 			</header>
-		</div>
+		
 	);
 };
 
