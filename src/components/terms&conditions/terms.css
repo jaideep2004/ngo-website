@@ -1,0 +1,31 @@
+.tccontain{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 30px;
+}
+.termshead{
+    font-size: 19px;
+	color: #f0dd4d;
+	/* margin-left: 100px; */
+	text-align: center;
+}
+.termscontent{
+    background-color: #22456b;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #f0dd4d;
+    h2{
+        color: #f0dd4d;
+    }
+    p{
+       text-align: justify;
+       color: white;
+       span{
+        color: #f0dd4d;
+       }
+    }
+}

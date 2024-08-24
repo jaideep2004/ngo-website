@@ -61,7 +61,7 @@
 	text-decoration: none;
 }
 .maindonate {
-	border-radius: 10px;
+	border-radius: 15px;
 	font-size: 20px;
 	color: #22456b;
 	font-weight: 700;
@@ -71,62 +71,64 @@
 	padding: 15px 25px;
 	transition: all 0.3s ease;
 	cursor: pointer;
-	
+
 	text-decoration: none;
 
 	&:hover {
-		animation: rotateShadow4 2s infinite;
+		animation: rotateShadow4 2s infinite linear;
 		transform: translateX(5px);
+		background-color: #22456b;
+		color: white;
 	}
 }
 
 @keyframes rotateShadow2 {
 	0% {
 		/* box-shadow: inset 2px 2px 0px #22456b; */
-		box-shadow: inset 2px 0px 0px #22456b;
+		box-shadow: inset 3px 0px 0px #22456b;
 	}
 	20% {
 		/* box-shadow: inset -2px 2px 0px #22456b; */
-		box-shadow: inset 0px 2px 0px #22456b;
+		box-shadow: inset 0px 3px 0px #22456b;
 	}
 
 	40% {
 		/* box-shadow: inset -2px 2px 0px #22456b; */
-		box-shadow: inset -2px 0px 0px #22456b;
+		box-shadow: inset -3px 0px 0px #22456b;
 	}
 	60% {
 		/* box-shadow: inset 2px -2px 0px #22456b; */
-		box-shadow: inset 0px -2px 0px #22456b;
+		box-shadow: inset 0px -3px 0px #22456b;
 	}
 	100% {
 		/* box-shadow: inset 2px -2px 0px #22456b; */
-		box-shadow: inset 2px 0px 0px #22456b;
+		box-shadow: inset 3px 0px 0px #22456b;
 	}
 }
 
 @keyframes rotateShadow4 {
 	0% {
 		/* box-shadow: inset 2px 2px 0px #22456b; */
-		box-shadow: 3px 0px 0px white;
+		box-shadow: 4px 0px 0px white;
 	}
 	20% {
 		/* box-shadow: inset -2px 2px 0px #22456b; */
-		box-shadow: 0px 3px 0px white;
+		box-shadow: 0px 4px 0px white;
 	}
 
 	40% {
 		/* box-shadow: inset -2px 2px 0px #22456b; */
-		box-shadow: -3px 0px 0px white;
+		box-shadow: -4px 0px 0px white;
 	}
 
 	60% {
 		/* box-shadow: inset 2px -2px 0px #22456b; */
-		box-shadow: 0px -3px 0px white;
+		box-shadow: 0px -4px 0px white;
 	}
 
 	100% {
 		/* box-shadow: inset 2px -2px 0px #22456b; */
-		box-shadow: 3px 0px 0px white;
+		box-shadow: 4px 0px 0px white;
 	}
 }
 
@@ -138,24 +140,66 @@
 	justify-content: center;
 	box-shadow: 1px 1px 5px #f0dd4d;
 	overflow: hidden;
+	transition: all 0.3s ease;
 }
 
 .carouselimg {
 	border-radius: 40px;
-	
+
+	transition: all 0.2s ease;
 }
 
 .carouselimg > img {
 	border-radius: 40px;
+	transition: all 0.3s ease;
 }
+
+.carousel-loading {
+	
+	transition: all 0.3s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	height: 600px;
+	width: 1300px; /* Adjust the height to match the expected height of the carousel */
+	background-color: transparent;
+
+
+	div {
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		border-top: 5px solid #f0dd4d;
+		border-bottom: 5px solid #f0dd4d;
+		animation: rotateicon 2s infinite linear;
+		margin-bottom: 330px;
+		
+		p {
+			text-align: center;
+			visibility: hidden;
+		}
+	}
+}
+
+@keyframes rotateicon {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
 
 /* main2 */
 .main2wrapper {
 	height: 100vh;
-	/* border: 1px solid black; */
+	/* border: 1px solid white; */
 	display: flex;
 	justify-content: center;
-	padding: 40px;
+	padding: 40px 50px;
 	align-items: center;
 }
 .main2left {
@@ -167,14 +211,14 @@
 }
 .main2right {
 	box-shadow: inset 2px 2px 2px #f0dd4d;
-	border: 1px solid white;
+	/* border: 1px solid white; */
 	border-radius: 50px;
 	display: flex;
 	flex-direction: column;
 	flex: 1.1;
 	justify-content: center;
 	align-items: center;
-	padding: 20px;
+	padding: 25px;
 	font-size: 18px;
 	color: white;
 	background-color: #22456b;
@@ -361,8 +405,7 @@
 	transition: all 0.3s ease;
 	cursor: pointer;
 	&:hover {
-		box-shadow:  1px 1px 5px black;
-		
+		box-shadow: 1px 1px 5px black;
 	}
 }
 .contcard > a {
@@ -398,6 +441,10 @@
 	height: 40px;
 	border: 1px solid white;
 	color: white;
+	&:hover{
+		color: #f0dd4d;
+		border: 1px solid #f0dd4d;
+	}
 }
 .customnextarrow {
 	cursor: pointer;
@@ -412,6 +459,10 @@
 	height: 40px;
 	border: 1px solid white;
 	color: white;
+	&:hover{
+		color: #f0dd4d;
+		border: 1px solid #f0dd4d;
+	}
 }
 
 /* main4 */
@@ -420,7 +471,7 @@
 	/* border: 1px solid white; */
 	margin-top: 80px;
 	display: flex;
-	padding: 40px;
+	padding: 40px 50px;
 	align-items: center;
 	justify-content: center;
 	gap: 15px;
@@ -442,7 +493,7 @@
 	display: flex;
 	flex-direction: column;
 	border: 1px solid #f0dd4d;
-	padding: 15px;
+	padding: 20px;
 	background-color: #22456b;
 	color: white;
 	flex: 1.4;
@@ -482,6 +533,10 @@
 	&:hover {
 		background-color: white;
 		animation: rotateShadow3 2s infinite;
+	}
+	a{
+		text-decoration: none;
+		color: inherit;
 	}
 }
 

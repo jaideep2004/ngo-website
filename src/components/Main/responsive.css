@@ -46,7 +46,7 @@
 		border: 2px solid #f0dd4d;
 		position: absolute;
 		top: 120px;
-		left: 10px;
+		left: 5px;
 		display: flex;
 		background-color: #22456b;
 		justify-content: center;
@@ -83,12 +83,15 @@
 		scale: 0.8;
 		/* width: 230px; */
 	}
+	#logofc{
+		scale: 0.7;
+		margin-left: -110px;
+	}
 	.headwrapper {
 		padding: 15px 7px 15px 7px;
 	}
 
 	.mainwrapper {
-		/* margin-top: 10px; */
 		display: flex;
 		flex-direction: column;
 	}
@@ -108,6 +111,7 @@
 
 	.rightcont {
 		scale: 0.85;
+		/* border-radius: 40%; */
 	}
 	.maindonate {
 		margin-top: 80px;
@@ -126,8 +130,8 @@
 		order: 2;
 	}
 	.main2right {
-		margin-left: -20px;
-		margin-right: -20px;
+		margin-left: -30px;
+		margin-right: -30px;
 		order: 1;
 		margin-top: 630px;
 	}
@@ -153,6 +157,9 @@
 		/* border: 1px solid black; */
 	}
 	.main4left {
+		margin-left: -20px;
+		margin-right: -20px;
+		/* border: 1px solid white; */
 		/* margin-top: 30px; */
 		/* margin-top: 70px; */
 	}
@@ -207,8 +214,18 @@
 	.aboutpgimg1 {
 		scale: 0.65 0.8;
 	}
+	.aboutleft1{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
 	.aboutleft2 {
 		order: 2;
+		/* border: 1px solid white; */
+
+	}
+	.aboutright2{
+		margin-left: -10px;
+		margin-right: -10px;
 	}
 
 	.visioncon {
@@ -251,13 +268,14 @@
 	}
 
 	/* joinus */
-	.joinuswrapper {
-		/* scale: 0.9; */
-
-		margin-left: -20px;
-		/* margin-right: -50px; */
-
-		/* flex-direction: column; */
+	.mainjoinuswrap{
+		flex-direction: column;
+	}
+	.joinhead{
+		margin-top: -70px;
+	}
+	.joinform{
+		margin-left: -25px;
 	}
 
 	.formdiv {
@@ -286,6 +304,13 @@
 	.donateform {
 		box-shadow: none;
 		margin-left: -25px;
+	}
+
+	.termscontain{
+		flex-direction: column;
+		/* padding: 0px; */
+		margin-left: -20px;
+		margin-right: -20px;
 	}
 
 	.razorbtn {

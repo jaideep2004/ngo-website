@@ -21,7 +21,8 @@ const Activities = () => {
 
 	return (
 		<div className='mainact'>
-			<div className='acthead'>
+			<div className='acthead'data-aos='fade-down'
+				data-aos-duration='500'>
 				<h1>Our Projects</h1>
 			</div>
 

@@ -3,6 +3,10 @@ import "./joinus.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const JoinUsForm = () => {
 	useEffect(() => {
@@ -13,154 +17,90 @@ const JoinUsForm = () => {
 	useEffect(() => {
 		AOS.init();
 	}, []);
-	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
-		dob: "",
-		mobile: "",
-		message: "",
-	});
 
-	const [errors, setErrors] = useState({
-		dob: "",
-		mobile: "",
-	});
+	//email
+	const form = useRef();
 
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData((prevData) => ({
-			...prevData,
-			[name]: value,
-		}));
-
-		// Clear validation errors when the user starts typing
-		setErrors((prevErrors) => ({
-			...prevErrors,
-			[name]: "",
-		}));
-	};
-
-	const handleSubmit = (e) => {
+	const sendEmail = (e) => {
 		e.preventDefault();
 
-		// Validate date of birth (simple pattern for DD/MM/YYYY format)
-		const dobPattern = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
-		if (!dobPattern.test(formData.dob)) {
-			setErrors((prevErrors) => ({
-				...prevErrors,
-				dob: "Please enter a valid date of birth (DD/MM/YYYY).",
-			}));
-			return;
-		}
-
-		// Validate mobile number (simple pattern for 10-digit US phone number)
-		const mobilePattern = /^\d{10}$/;
-		if (!mobilePattern.test(formData.mobile)) {
-			setErrors((prevErrors) => ({
-				...prevErrors,
-				mobile: "Please enter a valid 10-digit mobile number.",
-			}));
-			return;
-		}
-
-		// Handle form submission logic (you can send data to a server or perform any other actions)
-		console.log("Form submitted:", formData);
-
-		// Reset form after submission
-		setFormData({
-			name: "",
-			email: "",
-			dob: "",
-			mobile: "",
-			message: "",
-		});
-
-		// Clear validation errors after successful submission
-		setErrors({
-			dob: "",
-			mobile: "",
-		});
+		emailjs
+			.sendForm("service_9mu97mo", "template_nmflire", form.current, {
+				publicKey: "ByY67qallsZ4slKux",
+			})
+			.then(
+				() => {
+					console.log("SUCCESS!");
+					toast.success("Email Sent!");
+					e.target.reset();
+				},
+				(error) => {
+					console.log("FAILED...", error.text);
+					toast.error("Failed to send email!");
+				}
+			);
 	};
 
 	return (
-		<div>
+		<div className='mainjoinuswrap'>
+			<ToastContainer/>
 			<div className='joinhead' data-aos='fade-down' data-aos-duration='500'>
 				<h1>Join Us</h1>
+				<h2>Get Involved and Help Transform Lives Today</h2>
 			</div>
 
-			<div className='joinuswrapper' data-aos='fade-up' data-aos-duration='500'>
-				<form onSubmit={handleSubmit} className='joinform'>
-					<div className='formdiv'>
-						<label htmlFor='name'>Name</label>
+			<form
+				className='joinform'
+				data-aos='fade-up'
+				data-aos-duration='500'
+				ref={form}
+				onSubmit={sendEmail}>
+				<div className='formdiv'>
+					<label htmlFor='name'>Name</label>
 
-						<input
-							type='text'
-							id='name'
-							name='name'
-							value={formData.name}
-							onChange={handleChange}
-							required
-						/>
-					</div>
+					<input type='text' id='name' name='user_name' required />
+				</div>
 
-					<div className='formdiv'>
-						<label htmlFor='email'>Email</label>
-						<input
-							type='email'
-							id='email'
-							name='email'
-							value={formData.email}
-							onChange={handleChange}
-							required
-						/>
-					</div>
+				<div className='formdiv'>
+					<label htmlFor='email'>Email</label>
+					<input type='email' id='email' name='user_email' required />
+				</div>
 
-					<div className='formdiv'>
-						<label htmlFor='dob'>Date of Birth</label>
+				<div className='formdiv'>
+					<label htmlFor='dob'>Date of Birth</label>
 
-						<input
-							type='text'
-							id='dob'
-							name='dob'
-							placeholder='DD/MM/YYYY'
-							value={formData.dob}
-							onChange={handleChange}
-							required
-						/>
-						<span className='error'>{errors.dob}</span>
-					</div>
+					<input
+						type='date'
+						id='dob'
+						name='dob'
+						placeholder='DD/MM/YYYY'
+						required
+					/>
+				</div>
 
-					<div className='formdiv'>
-						<label htmlFor='mobile'>Mobile No</label>
-						<input
-							type='tel'
-							id='mobile'
-							name='mobile'
-							placeholder='e.g., 1234567890'
-							value={formData.mobile}
-							onChange={handleChange}
-							required
-						/>
-						<span className='error'>{errors.mobile}</span>
-					</div>
+				<div className='formdiv'>
+					<label htmlFor='mobile'>Mobile No</label>
+					<input
+						type='tel'
+						id='mobile'
+						name='mobile'
+						placeholder='e.g., 1234567890'
+						required
+						maxLength={10}
+					/>
+				</div>
 
-					<div className='formdiv'>
-						<label htmlFor='message'>Message</label>
-						<textarea
-							id='message'
-							name='message'
-							value={formData.message}
-							onChange={handleChange}
-							required></textarea>
-					</div>
-					<div className='formdiv'>
+				<div className='formdiv'>
+					<label htmlFor='message'>Message</label>
+					<textarea id='message' name='message' required></textarea>
+				</div>
+				<div className='formdiv'>
 					<label htmlFor='message'></label>
-						<div className='formbtn'>
-							<button type='submit'>Submit</button>
-						</div>
+					<div className='formbtn'>
+						<button type='submit'>Submit</button>
 					</div>
-				</form>
-			</div>
+				</div>
+			</form>
 		</div>
 	);
 };

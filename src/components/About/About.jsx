@@ -22,9 +22,9 @@ const About = () => {
 					<h1>About Us</h1>
 				</div>
 				<div className='aboutwrapper1'>
-					<div className='aboutleft1'>
-						<div className='about1con'>
-							<p data-aos='fade-right' data-aos-duration='500'>
+					<div className='aboutleft1' data-aos='fade-right' data-aos-duration='500'>
+						<div className='about1con' >
+							<p >
 								<b>LIFE FOUNDATION</b> is a non-Government, non-political,
 								non-profit making organization engaged in the field of social
 								development. It was founded by a group of like-minded social
@@ -44,7 +44,7 @@ const About = () => {
 					<div className='aboutright1'>
 						<div
 							className='aboutpgimg'
-							data-aos='fade-left'
+							data-aos='fade-up'
 							data-aos-duration='500'>
 							<img src='./images/at4.jpg' alt='' />
 						</div>
@@ -53,11 +53,12 @@ const About = () => {
 
 				<div className='aboutwrapper2'>
 					<div className='aboutleft2'>
-						<div className='aboutpgimg1'>
+						<div className='aboutpgimg1' data-aos='fade-up'
+							data-aos-duration='500'>
 							<img src='./images/at5.jpg' alt='' />
 						</div>
 					</div>
-					<div className='aboutright2'>
+					<div className='aboutright2' data-aos='fade-left' data-aos-duration='500'>
 						<div className='about2con'>
 							<p>
 								So far, all the working years have been meaningful in achieving

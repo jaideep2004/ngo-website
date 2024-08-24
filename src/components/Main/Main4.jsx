@@ -3,7 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { NavLink } from "react-router-dom";
 const Main4 = () => {
 	useEffect(() => {
 		AOS.init();
@@ -54,7 +54,8 @@ const Main4 = () => {
 					className='donatebtn'
 					data-aos='fade-right'
 					data-aos-duration='400'>
-					DONATE NOW
+					<NavLink to='donate'>DONATE NOW</NavLink>
+					
 				</div>
 			</div>
 			<div className='main4right'>

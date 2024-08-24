@@ -1,23 +1,29 @@
-.joinuswrapper {
+.mainjoinuswrap{
 	display: flex;
-	/* flex-direction: column; */
-	padding: 30px;
-	/* align-items: start; */
-	/* align-items: center; */
-	justify-content: center;
-	gap: 10px;
+	padding: 40px 70px;
+	gap: 60px;
+	align-items: center;
 }
+
+
 .joinhead {
 	font-size: 21px;
 	color: #f0dd4d;
 	/* margin-left: 100px; */
 	text-align: center;
+	flex: 0.8;
+	h2{
+		color: white;
+	font-size: 17px;
+	font-weight: normal;
+	}
 }
 
 .joinform {
+	background-color: #22456b;
+	flex: 1;
 	display: flex;
 	flex-direction: column;
-    margin-top: -10px;
 	/* border: 1px solid black; */
 	padding: 20px;
 	gap: 18px;
@@ -62,7 +68,7 @@
 	border: none;
 	color: #22456b;
 	background-color: #f0dd4d;
-	padding: 15px 20px;
+	padding: 15px 35px;
 	border-radius: 15px;
 	font-size: 18px;
 	cursor: pointer;

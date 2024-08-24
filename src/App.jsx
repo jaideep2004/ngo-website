@@ -11,6 +11,12 @@ import Activities from "./components/Activities/Activities";
 import ActivityContent from "./components/Activities/ActivityContent";
 import Gallery from "./components/Gallery/Gallery";
 import projects from "./components/data/data"; // Import projects data from data.js
+import Terms from "./components/terms&conditions/Terms";
+import Privacy from "./components/terms&conditions/Privacy";
+import Refund from "./components/terms&conditions/Refund";
+import Success from "./components/Donate/Success";
+import Failure from "./components/Donate/Failure";
+
 
 function App() {
 	return (
@@ -32,6 +38,11 @@ function App() {
 					<Route path='/gallery' element={<Gallery />} />
 					<Route path='/joinus' element={<JoinUsForm />} />
 					<Route path='/donate' element={<DonationPage />} />
+					<Route path='/termsconditions' element={<Terms />} />
+					<Route path='/privacypolicy' element={<Privacy />} />
+					<Route path='/refundpolicy' element={<Refund />} />
+					<Route path="/success" element={<Success/>} />
+					<Route path="/failure" element={<Failure/>} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

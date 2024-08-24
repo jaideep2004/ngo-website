@@ -3,6 +3,9 @@
 	color: #f0dd4d;
 	/* margin-left: 100px; */
 	text-align: center;
+    h3{
+        color: white;
+    }
 }
 .donatehead > h2 {
 	color: white;
@@ -25,24 +28,31 @@
 }
 
 .donateform {
+    background-color: #22456b;
     box-shadow:  2px 2px 5px #f0dd4d;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 	flex: 1;
     /* border: 1px solid wheat; */
     padding: 20px;
     gap: 15px;
+    h3{
+        text-align: center;
+        color: white;
+    }
 }
 
 
 .formdiv>input{
-
     width: 430px;
+    padding: 10px;
+    border-radius: 15px;
 }
 .formdiv > label {
+    margin-right: 20px;
     /* border: 1px solid white; */
     width: 190px;
 	color: #f0dd4d;
@@ -57,10 +67,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px ; 
+    padding: 15px 50px ; 
+    width: 100%;
     outline: none;
     border: none;
-    font-size: 17px;
+    font-size: 18px;
     border-radius: 15px;
     background-color: #f0dd4d;
     cursor: pointer;
@@ -71,6 +82,36 @@
 }
 .razorbtn>img{
     background: transparent;
-    width: 25px;
+    width: 30px;
 }
 /* rzp_test_uCEraKVgEt8ZVM */
+
+.termscontain{
+    padding: 50px 90px;
+/* border: 1px solid white; */
+    /* margin-top: 100px; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 20px;
+
+}
+.tlink{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #f0dd4d;
+    box-shadow: inset 1px 1px 2px white;
+    transition: all 0.2s ease;
+    &:hover{
+        box-shadow: inset 2px 2px 2px #f0dd4d;
+    }
+    &:nth-child(1){
+        /* margin-left: 40px; */
+    }
+}
