@@ -3,16 +3,15 @@
 	color: #f0dd4d;
 	/* margin-left: 100px; */
 	text-align: center;
-    h3{
-        color: white;
-    }
+	h3 {
+		color: white;
+	}
 }
 .donatehead > h2 {
 	color: white;
 	font-size: 17px;
 	font-weight: normal;
 }
-
 
 .donatewrap {
 	/* border: 1px solid white; */
@@ -28,33 +27,32 @@
 }
 
 .donateform {
-    background-color: #22456b;
-    box-shadow:  2px 2px 5px #f0dd4d;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
+	background-color: #22456b;
+	box-shadow: 2px 2px 5px #f0dd4d;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: center;
 	flex: 1;
-    /* border: 1px solid wheat; */
-    padding: 20px;
-    gap: 15px;
-    h3{
-        text-align: center;
-        color: white;
-    }
+	/* border: 1px solid wheat; */
+	padding: 20px;
+	gap: 15px;
+	h3 {
+		text-align: center;
+		color: white;
+	}
 }
 
-
-.formdiv>input{
-    width: 430px;
-    padding: 10px;
-    border-radius: 15px;
+.formdiv > input {
+	width: 430px;
+	padding: 10px;
+	border-radius: 15px;
 }
 .formdiv > label {
-    margin-right: 20px;
-    /* border: 1px solid white; */
-    width: 190px;
+	margin-right: 20px;
+	/* border: 1px solid white; */
+	width: 190px;
 	color: #f0dd4d;
 	font-size: 19px;
 	font-weight: 600;
@@ -62,56 +60,80 @@
 .formdiv:nth-child(6) > label > span {
 	color: white;
 }
-.razorbtn{
-  /* margin-left: 30px; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 50px ; 
-    width: 100%;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    border-radius: 15px;
-    background-color: #f0dd4d;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    &:hover{
-        background-color: white;
-    }
+.razorbtn {
+	/* margin-left: 30px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 50px;
+	width: 100%;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	border-radius: 15px;
+	background-color: #f0dd4d;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	&:hover {
+		background-color: white;
+	}
 }
-.razorbtn>img{
-    background: transparent;
-    width: 30px;
+.razorbtn > img {
+	background: transparent;
+	width: 40px;
 }
 /* rzp_test_uCEraKVgEt8ZVM */
 
-.termscontain{
-    padding: 50px 90px;
-/* border: 1px solid white; */
-    /* margin-top: 100px; */
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    gap: 20px;
-
+.termscontain {
+	padding: 50px 90px;
+	/* border: 1px solid white; */
+	/* margin-top: 100px; */
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	gap: 20px;
 }
-.tlink{
+.tlink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* border: 1px solid white; */
+	padding: 15px;
+	border-radius: 15px;
+	text-decoration: none;
+	color: #f0dd4d;
+	box-shadow: inset 1px 1px 2px white;
+	transition: all 0.2s ease;
+	&:hover {
+		box-shadow: inset 2px 2px 2px #f0dd4d;
+	}
+	&:nth-child(1) {
+		/* margin-left: 40px; */
+	}
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid white; */
-    padding: 15px;
-    border-radius: 15px;
-    text-decoration: none;
-    color: #f0dd4d;
-    box-shadow: inset 1px 1px 2px white;
-    transition: all 0.2s ease;
-    &:hover{
-        box-shadow: inset 2px 2px 2px #f0dd4d;
-    }
-    &:nth-child(1){
-        /* margin-left: 40px; */
-    }
+.paymentButtons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+
+	div {
+		color: #22456b;
+		transition: all 0.2s ease;
+		box-shadow: 1px 1px 2px black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background-color: #f0dd4d;
+		border: 2px solid #f0dd4d;
+		padding: 10px 20px;
+		border-radius: 10px;
+		cursor: pointer;
+		&:hover {
+			background-color: #22456b;
+			color: white;
+		}
+	}
 }

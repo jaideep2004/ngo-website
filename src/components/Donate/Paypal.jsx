@@ -3,14 +3,23 @@ import "./donate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { NavLink } from "react-router-dom";
+import CustomAlert from "./CustomAlert"; // Import the custom alert component
 
 const Paypal = () => {
-	useEffect(() => {
-		// Scroll to the top when the component mounts
-		window.scrollTo({ top: 0, behavior: "smooth" });
-		AOS.init(); // Initialize AOS animations
+	const [internationalAmount, setInternationalAmount] = useState("");
+	const [foreignName, setForeignName] = useState("");
+	const [foreignEmail, setForeignEmail] = useState("");
+	const [foreignMobile, setForeignMobile] = useState("");
+	const [foreignAddress, setForeignAddress] = useState("");
+	const [paypalReady, setPaypalReady] = useState(false);
+	const [paypalButtonRendered, setPaypalButtonRendered] = useState(false);
+	const [showAlert, setShowAlert] = useState(false);
+	const [alertMessage, setAlertMessage] = useState("");
 
-		// Load PayPal SDK
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+		AOS.init();
+
 		const script = document.createElement("script");
 		script.src =
 			"https://www.paypal.com/sdk/js?client-id=AS59gZd8khMXUsEmc5REs86XEb-9XfjEoAqO1t-B1YnLkPRh1bIgpHBzBbtWZVmUc09BVDvU3RfXjqfV&currency=USD";
@@ -18,25 +27,7 @@ const Paypal = () => {
 		document.body.appendChild(script);
 	}, []);
 
-	const [amount, setAmount] = useState("1000");
-	const [customAmount, setCustomAmount] = useState("");
-	const [name, setName] = useState("");
-	const [panCard, setPanCard] = useState("");
-	const [email, setEmail] = useState("");
-	const [mobile, setMobile] = useState("");
-	const [address, setAddress] = useState("");
-
-	const [internationalAmount, setInternationalAmount] = useState(""); // Amount for foreign donors
-	const [foreignName, setForeignName] = useState("");
-	const [foreignEmail, setForeignEmail] = useState("");
-	const [foreignMobile, setForeignMobile] = useState("");
-	const [foreignAddress, setForeignAddress] = useState("");
-	const [paypalReady, setPaypalReady] = useState(false); // Track if PayPal SDK is ready
-	const [paypalButtonRendered, setPaypalButtonRendered] = useState(false); // Track if PayPal button is rendered
-
-	const handleInternationalPayment = () => {
-		// PayPal will handle the international payment
-	};
+	const handleInternationalPayment = () => {};
 
 	const handleInternationalSubmit = (event) => {
 		event.preventDefault();
@@ -44,14 +35,7 @@ const Paypal = () => {
 	};
 
 	useEffect(() => {
-		// Re-render PayPal button when amount changes or SDK is ready
-		if (
-			paypalReady &&
-			window.paypal &&
-			!paypalButtonRendered &&
-			internationalAmount
-		) {
-			// Cleanup previous PayPal buttons to avoid multiple buttons
+		if (paypalReady && window.paypal && !paypalButtonRendered) {
 			document.getElementById("paypal-button-container").innerHTML = "";
 
 			window.paypal
@@ -61,7 +45,7 @@ const Paypal = () => {
 							purchase_units: [
 								{
 									amount: {
-										value: internationalAmount, // Amount user entered
+										value: internationalAmount,
 										currency_code: "USD",
 									},
 								},
@@ -70,30 +54,41 @@ const Paypal = () => {
 					},
 					onApprove: function (data, actions) {
 						return actions.order.capture().then(function (details) {
-							alert(
-								"Transaction completed by " + details.payer.name.given_name
+							setAlertMessage(
+								`Your donation of $${internationalAmount} was successful. Thank you, ${details.payer.name.given_name}!`
 							);
+							setShowAlert(true);
 						});
 					},
 					onError: function (err) {
-						alert("PayPal payment failed: " + err);
+						setAlertMessage(
+							`Payment failed for the donation of $${internationalAmount}. Please try again. Error: ${err}`
+						);
+						setShowAlert(true);
+					},
+					onCancel: function () {
+						setAlertMessage(
+							`Payment was canceled for the donation of $${internationalAmount}.`
+						);
+						setShowAlert(true);
 					},
 				})
 				.render("#paypal-button-container");
 
-			setPaypalButtonRendered(true); // Ensure the button is rendered only once per amount change
+			setPaypalButtonRendered(true);
 		}
 	}, [paypalReady, internationalAmount, paypalButtonRendered]);
 
 	useEffect(() => {
-		// Reset PayPal button rendered state when the amount changes
 		setPaypalButtonRendered(false);
 	}, [internationalAmount]);
 
+	const handleCloseAlert = () => {
+		setShowAlert(false);
+	};
+
 	return (
 		<>
-			<div className='donatewrap'>{/* Other content */}</div>
-
 			<div className='donatewrap'>
 				<div
 					className='donatehead'
@@ -110,8 +105,7 @@ const Paypal = () => {
 					onSubmit={handleInternationalSubmit}
 					className='donateform'
 					data-aos='fade-up'
-					data-aos-duration='500'
-					style={{ marginTop: "50px" }}>
+					data-aos-duration='500'>
 					<h3>For International Donors</h3>
 					<div className='formdiv'>
 						<label>Name</label>
@@ -161,12 +155,18 @@ const Paypal = () => {
 							min='1'
 							value={internationalAmount}
 							onChange={(e) => setInternationalAmount(e.target.value)}
-							placeholder='Enter amount in USD'
+							placeholder='Enter amount '
 							required
 						/>
 					</div>
-					*Paypal button will appear when you enter an amount
-					<div className='formdiv' id='paypal-button-container'>
+
+					<div
+						className='formdiv'
+						id='paypal-button-container'
+						style={{
+							opacity: internationalAmount ? 1 : 0.5,
+							pointerEvents: internationalAmount ? "auto" : "none",
+						}}>
 						{/* PayPal Button will be rendered here */}
 					</div>
 				</form>
@@ -182,6 +182,10 @@ const Paypal = () => {
 					Refund Policy
 				</NavLink>
 			</div>
+
+			{showAlert && (
+				<CustomAlert message={alertMessage} onClose={handleCloseAlert} />
+			)}
 		</>
 	);
 };

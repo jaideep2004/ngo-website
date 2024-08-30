@@ -1,40 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./donate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { NavLink } from "react-router-dom";
-import PayUForm from "./PayUForm";
 import Paypal from "./Paypal";
+import CustomAlert from "./CustomAlert"; // Import the custom alert component
 
 const DonationPage = () => {
-	useEffect(() => {
-		// Scroll to the top when the component mounts
-		window.scrollTo({ top: 0, behavior: "smooth" });
-		AOS.init(); // Initialize AOS animations
-
-		// Load PayPal SDK
-		const script = document.createElement("script");
-		script.src =
-			"https://www.paypal.com/sdk/js?client-id=ARfexKIk2i67_lZXjtb-NhiXj3rJO9cDli3v7-lk45jOs_fvZp-IzvanbPyJOPmOW8Eiq0bbODczpSUx&currency=USD";
-		script.addEventListener("load", () => setPaypalReady(true));
-		document.body.appendChild(script);
-	}, []);
-
-	const [amount, setAmount] = useState("1000"); // Default amount in paise (1000 paise = 10 INR)
-	const [customAmount, setCustomAmount] = useState(""); // Custom amount entered by the user
+	const [amount, setAmount] = useState("1000");
+	const [customAmount, setCustomAmount] = useState("");
 	const [name, setName] = useState("");
 	const [panCard, setPanCard] = useState("");
 	const [email, setEmail] = useState("");
 	const [mobile, setMobile] = useState("");
 	const [address, setAddress] = useState("");
+	const [showAlert, setShowAlert] = useState(false);
+	const [alertMessage, setAlertMessage] = useState("");
 
-	const [internationalAmount, setInternationalAmount] = useState(""); // Amount for foreign donors
-	const [foreignName, setForeignName] = useState("");
-	const [foreignEmail, setForeignEmail] = useState("");
-	const [foreignMobile, setForeignMobile] = useState("");
-	const [foreignAddress, setForeignAddress] = useState("");
-	const [paypalReady, setPaypalReady] = useState(false); // Track if PayPal SDK is ready
-	const [paypalButtonRendered, setPaypalButtonRendered] = useState(false); // Track if PayPal button is rendered
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+		AOS.init();
+	}, []);
 
 	const handlePayment = () => {
 		if (typeof window.Razorpay === "undefined") {
@@ -47,7 +32,8 @@ const DonationPage = () => {
 		if (customAmount) {
 			const customAmountInPaise = parseFloat(customAmount) * 100;
 			if (isNaN(customAmountInPaise) || customAmountInPaise <= 0) {
-				alert("Please enter a valid amount");
+				setAlertMessage("Please enter a valid amount");
+				setShowAlert(true);
 				return;
 			}
 			finalAmount = customAmountInPaise;
@@ -56,15 +42,19 @@ const DonationPage = () => {
 		}
 
 		const options = {
-			key: "rzp_live_Z0oXHYNLxtwVOw", // Replace with your Razorpay Key ID
-			amount: finalAmount, // Amount in paise
+			key: "rzp_live_Z0oXHYNLxtwVOw",
+			amount: finalAmount,
 			currency: "INR",
 			name: "Life Foundation",
 			description: "Donation",
-			image: "./images/logo8.png", // Replace with your logo URL
+			image: "./images/logo8.png",
 			handler: function (response) {
-				alert("Payment Successful: " + response.razorpay_payment_id);
-				// Handle successful payment here, such as sending the payment ID to your server for verification
+				setAlertMessage(
+					`Your donation of ₹${(finalAmount / 100).toFixed(
+						2
+					)} was successful! Payment ID: ${response.razorpay_payment_id}`
+				);
+				setShowAlert(true);
 			},
 			prefill: {
 				name: name,
@@ -80,77 +70,56 @@ const DonationPage = () => {
 			},
 			modal: {
 				ondismiss: function () {
-					alert("Payment cancelled.");
+					// setAlertMessage("Payment cancelled.");
+					setAlertMessage(`Payment cancelled for the amount of ₹${(finalAmount / 100).toFixed(2)}.`);
+					setShowAlert(true);
 				},
 			},
 		};
 
 		const rzp = new window.Razorpay(options);
 		rzp.on("payment.failed", function (response) {
-			alert("Payment Failed: " + response.error.description);
-			// Handle payment failure here
+			setAlertMessage(`Payment Failed: ${response.error.description}`);
+			setShowAlert(true);
 		});
 		rzp.open();
 	};
 
-	const handleInternationalPayment = () => {
-		// Placeholder for international payment handling logic
-		// PayPal button will take care of the transaction
-	};
-
 	const handleSubmit = (event) => {
-		event.preventDefault(); // Prevent default form submission which reloads the page
+		event.preventDefault();
 		handlePayment();
 	};
 
-	const handleInternationalSubmit = (event) => {
-		event.preventDefault();
-		handleInternationalPayment();
+	const localPaymentRef = useRef(null);
+	const paypalRef = useRef(null);
+
+	const handleScrollToLocal = () => {
+		if (localPaymentRef.current) {
+			localPaymentRef.current.scrollIntoView({ behavior: "smooth" });
+		}
 	};
 
-	// Render PayPal button only when SDK is loaded and button hasn't been rendered yet
-	useEffect(() => {
-		if (
-			paypalReady &&
-			window.paypal &&
-			!paypalButtonRendered &&
-			internationalAmount
-		) {
-			window.paypal
-				.Buttons({
-					createOrder: function (data, actions) {
-						console.log("International Amount: ", internationalAmount); // Check the amount value
-						return actions.order.create({
-							purchase_units: [
-								{
-									amount: {
-										value: internationalAmount, // Ensure this reflects the user input
-										currency_code: "USD",
-									},
-								},
-							],
-						});
-					},
-					onApprove: function (data, actions) {
-						return actions.order.capture().then(function (details) {
-							alert(
-								"Transaction completed by " + details.payer.name.given_name
-							);
-						});
-					},
-					onError: function (err) {
-						alert("PayPal payment failed: " + err);
-					},
-				})
-				.render("#paypal-button-container");
-
-			setPaypalButtonRendered(true); // Ensure the button is rendered only once
+	const handleScrollToPaypal = () => {
+		if (paypalRef.current) {
+			paypalRef.current.scrollIntoView({ behavior: "smooth" });
 		}
-	}, [paypalReady, paypalButtonRendered, internationalAmount]);
+	};
+
+	const handleCloseAlert = () => {
+		setShowAlert(false);
+	};
 
 	return (
 		<>
-			<div className='donatewrap'>
+			<div
+				className='paymentButtons'
+				data-aos='fade-down'
+				data-aos-duration='500'>
+				<div onClick={handleScrollToLocal}>Donate (India)</div>
+				<div onClick={handleScrollToPaypal}>Donate (International)</div>
+			</div>
+
+			<div className='donatewrap' ref={localPaymentRef}>
 				<div
 					className='donatehead'
 					data-aos='fade-down'
@@ -162,7 +131,6 @@ const DonationPage = () => {
 					</h2>
 				</div>
 
-				{/* Indian Donor Form */}
 				<form
 					onSubmit={handleSubmit}
 					className='donateform'
@@ -238,8 +206,12 @@ const DonationPage = () => {
 					</div>
 				</form>
 			</div>
-
-			<Paypal />
+			<div ref={paypalRef}>
+				<Paypal />
+			</div>
+			{showAlert && (
+				<CustomAlert message={alertMessage} onClose={handleCloseAlert} />
+			)}
 		</>
 	);
 };

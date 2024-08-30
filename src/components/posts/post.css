@@ -1,0 +1,185 @@
+.dashContain {
+	/* border: 1px solid white; */
+	padding: 30px 70px;
+	display: flex;
+	flex-direction: column;
+}
+.adminhead {
+	text-align: center;
+	font-size: 18px;
+	color: #f0dd4d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	h2 {
+		font-size: 20px;
+		color: white;
+	}
+}
+
+.postFormcontain {
+	/* border: 1px solid white; */
+}
+
+.postForm {
+	/* border: 1px solid white; */
+	box-shadow: inset 2px -2px 3px #f0dd4d;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 25px;
+}
+.quillcontain {
+	/* border: 1px solid red; */
+	width: 500px;
+	min-height: 300px;
+	height: 50px;
+	padding: 10px;
+	border-radius: 15px;
+	font-size: 28px;
+	background-color: white;
+
+	&:active,
+	&:hover,
+	&:target {
+		box-shadow: inset -2px -2px 2px #f0dd4d;
+	}
+}
+.ql-container.ql-snow .ql-editor {
+	border: none;
+	font-size: 18px;
+}
+
+/* Optionally, remove the outer border as well */
+.ql-container.ql-snow {
+	border: none;
+}
+
+#adminImg {
+	margin-top: 20px;
+	color: white;
+}
+#adminBtn {
+	background-color: #f0dd4d;
+	font-size: 18px;
+	padding: 15px 30px;
+	border-radius: 15px;
+	/* border: none; */
+	cursor: pointer;
+	border: 2px solid #f0dd4d;
+	&:hover {
+		background-color: #22456b;
+		color: white;
+	}
+}
+.existPostHead {
+	color: white;
+}
+
+.existPosts {
+	box-shadow: inset -2px -2px 2px white;
+	/* border: 1px solid white; */
+	display: flex;
+	/* flex-wrap: wrap; */
+	gap: 20px;
+	padding: 30px;
+	color: white;
+	overflow-x: scroll;
+	h2 {
+		color: white;
+	}
+}
+
+.postDelete {
+	cursor: pointer;
+	color: white;
+	background-color: #dc3131;
+	border: none;
+	border-radius: 12px;
+	font-size: 18px;
+	padding: 10px 20px;
+	&:hover {
+		background-color: red;
+	}
+}
+.card-container {
+	/* border: 1px solid #ddd; */
+	box-shadow: inset -2px -2px 2px white;
+	display: flex;
+	/* flex-wrap: wrap; */
+	overflow-x: scroll;
+	gap: 20px;
+	color: white;
+	padding: 10px;
+}
+
+.post-card {
+	box-shadow: inset -2px -2px 4px white;
+	padding: 20px;
+	border-radius: 5px;
+	width: 220px;
+	min-width: 250px;
+	backdrop-filter: blur(10px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.post-image {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+}
+
+.readmore {
+	color: #22456b;
+	text-decoration: none;
+	background-color: #f0dd4d;
+	padding: 10px 30px;
+	border-radius: 12px;
+	&:hover {
+		background-color: yellow;
+	}
+}
+
+.post-list {
+	background-color: #22456b;
+	padding: 40px 50px;
+	/* border: 1px solid white; */
+	overflow-x: scroll;
+	h2 {
+		font-size: 40px;
+		color: #f0dd4d;
+	}
+}
+
+.postdetail {
+	/* border: 1px solid white; */
+	border-radius: 20px;
+	box-shadow: 2px 2px 3px white;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	h1 {
+		color: white;
+	}
+	img {
+		width: 700px;
+		box-shadow: 1px 1px 2px white;
+	}
+}
+.posttext {
+	/* display: flex; */
+
+	/* border: 1px solid white; */
+	color: white;
+	line-height: 1.8;
+	padding: 20px 30px;
+}
+.compContain{
+	margin-top: 40px;
+}

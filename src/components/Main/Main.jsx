@@ -17,6 +17,7 @@ import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import PostList from "../posts/PostList";
 
 const Main = () => {
 	const [showTypeAnimation, setShowTypeAnimation] = useState(false);
@@ -108,6 +109,7 @@ const Main = () => {
 			<Main2 />
 			<Main3 />
 			<Main4 />
+			<PostList/>
 			<Main5 />
 		</div>
 	);

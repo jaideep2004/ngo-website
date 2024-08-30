@@ -1,12 +1,11 @@
 @media only screen and (max-width: 768px) {
 	body {
 		overflow-x: hidden;
-		/* user-select: none; */
+		user-select: none;
 	}
 	.header {
 		/* border: 2px solid white; */
 		position: sticky;
-		/* box-shadow: inset -2px 2px 2px #f0dd4d; */
 		z-index: 1000;
 	}
 	#mmenu {
@@ -77,13 +76,13 @@
 		display: none;
 	}
 
-	.logo  {
+	.logo {
 		margin-left: -30px;
 		/* border: 1px solid white; */
 		scale: 0.8;
 		/* width: 230px; */
 	}
-	#logofc{
+	#logofc {
 		scale: 0.7;
 		margin-left: -110px;
 	}
@@ -160,8 +159,6 @@
 		margin-left: -20px;
 		margin-right: -20px;
 		/* border: 1px solid white; */
-		/* margin-top: 30px; */
-		/* margin-top: 70px; */
 	}
 
 	.banktab > tr > td:nth-child(1) {
@@ -214,16 +211,15 @@
 	.aboutpgimg1 {
 		scale: 0.65 0.8;
 	}
-	.aboutleft1{
+	.aboutleft1 {
 		margin-left: -10px;
 		margin-right: -10px;
 	}
 	.aboutleft2 {
 		order: 2;
 		/* border: 1px solid white; */
-
 	}
-	.aboutright2{
+	.aboutright2 {
 		margin-left: -10px;
 		margin-right: -10px;
 	}
@@ -250,7 +246,6 @@
 
 	.actconimg > img {
 		scale: 0.72 1;
-		/* margin-top: -130px; */
 	}
 	.actwrap1 {
 		flex-direction: column;
@@ -268,21 +263,21 @@
 	}
 
 	/* joinus */
-	.mainjoinuswrap{
+	.mainjoinuswrap {
 		flex-direction: column;
 	}
-	.joinhead{
+	.joinhead {
 		margin-top: -70px;
 	}
-	.joinform{
+	.joinform {
 		margin-left: -25px;
 	}
 
 	.formdiv {
 		flex-direction: column;
-		/* align-items: start; */
 	}
 	.formdiv > input {
+		margin-left: 20px;
 		scale: 0.8 1;
 	}
 	.formdiv > label {
@@ -290,6 +285,7 @@
 	}
 	.formdiv > textarea {
 		scale: 0.8 1;
+		margin-left: 20px;
 	}
 
 	.formbtn {
@@ -298,17 +294,20 @@
 
 	/* donate */
 	.donatewrap {
-		/* margin-left: -40px; */
 		flex-direction: column;
 	}
 	.donateform {
+		margin-top: -15px;
+		/* border: 1px solid white; */
 		box-shadow: none;
 		margin-left: -25px;
 	}
+	.paymentButtons {
+		margin: 10px;
+	}
 
-	.termscontain{
+	.termscontain {
 		flex-direction: column;
-		/* padding: 0px; */
 		margin-left: -20px;
 		margin-right: -20px;
 	}
@@ -318,6 +317,28 @@
 		scale: 1.06;
 	}
 
+	/* posts */
+
+	.postdetail {
+		img {
+			scale: 0.5;
+			margin-top: -35px;
+		}
+	}
+
+	.postFormcontain {
+		margin-left: -60px;
+		margin-right: -60px;
+	}
+
+	.posttext {
+		margin-top: -10px;
+	}
+
+	.quillcontain {
+		margin-top: 40px;
+		scale: 0.8 1;
+	}
 	/* footer */
 	.footerwrapper {
 		margin-top: 120px;
