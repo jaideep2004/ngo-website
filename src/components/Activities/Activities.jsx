@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 import ActivityCard from "./ActivityCard";
@@ -21,8 +19,7 @@ const Activities = () => {
 
 	return (
 		<div className='mainact'>
-			<div className='acthead'data-aos='fade-down'
-				data-aos-duration='500'>
+			<div className='acthead' data-aos='fade-down' data-aos-duration='500'>
 				<h1>Our Projects</h1>
 			</div>
 

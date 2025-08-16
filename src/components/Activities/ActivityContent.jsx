@@ -32,20 +32,6 @@ const ActivityContent = ({ projects }) => {
 
 	return (
 		<div className='mainactcon'>
-			{/* <div className='actwrapper1'>
-				<div className='acthead'>
-					<h1>{mainPart}</h1>
-				</div>
-				<div className='actwrap1'>
-					<div className='actconimg'>
-						<img src={imageSrc} alt={project.cardhead} />
-					</div>
-					<div className='actcondesc'>
-						<p>{project.description}</p>
-					</div>
-				</div>
-			</div> */}
-
 			<div className='actwrapper'>
 				<div className='actwrap2'>
 					<div className='acthead'>
@@ -56,7 +42,7 @@ const ActivityContent = ({ projects }) => {
 					</div>
 				</div>
 				<div className='actwrap3'>
-				<div className='actcondesc'>
+					<div className='actcondesc'>
 						<p>{project.description}</p>
 					</div>
 				</div>

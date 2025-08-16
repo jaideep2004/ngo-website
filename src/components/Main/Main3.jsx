@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -12,65 +10,64 @@ import ProjectCard from "./ProjectCard";
 import projects from "../data/data"; // Import projects data from data.js
 
 const Main3 = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+	useEffect(() => {
+		AOS.init();
+	}, []);
 
-  const CustomPrevArrow = (props) => {
-    const { onClick } = props;
-    return (
-      <div className="customprevarrow" onClick={onClick}>
-        <i className="fa-solid fa-angles-left"></i>
-      </div>
-    );
-  };
+	const CustomPrevArrow = (props) => {
+		const { onClick } = props;
+		return (
+			<div className='customprevarrow' onClick={onClick}>
+				<i className='fa-solid fa-angles-left'></i>
+			</div>
+		);
+	};
 
-  const CustomNextArrow = (props) => {
-    const { onClick } = props;
-    return (
-      <div className="customnextarrow" onClick={onClick}>
-        <i className="fa-solid fa-angles-right"></i>
-      </div>
-    );
-  };
+	const CustomNextArrow = (props) => {
+		const { onClick } = props;
+		return (
+			<div className='customnextarrow' onClick={onClick}>
+				<i className='fa-solid fa-angles-right'></i>
+			</div>
+		);
+	};
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-  };
+	const settings = {
+		dots: false,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2500,
+		prevArrow: <CustomPrevArrow />,
+		nextArrow: <CustomNextArrow />,
+	};
 
-  return (
-   
-      <div className="main3wrapper">
-        <div className="main3head">
-          <h3 data-aos="fade-right">What We Are Doing</h3>
-          <h2 data-aos="zoom-in-up" data-aos-duration="1000">
-            We Are On A Mission To Help The Helpless
-          </h2>
-        </div>
+	return (
+		<div className='main3wrapper'>
+			<div className='main3head'>
+				<h3 data-aos='fade-right'>What We Are Doing</h3>
+				<h2 data-aos='zoom-in-up' data-aos-duration='1000'>
+					We Are On A Mission To Help The Helpless
+				</h2>
+			</div>
 
-        <div className="main3con">
-          <Slider {...settings} >
-            {projects.map((project) => (
-              <Link to="/activities" key={project.id} className="frontslider">
-                <ProjectCard
-                  imgsrc={project.imgsrc}
-                  cardhead={project.cardhead}
-                />
-              </Link>
-            ))}
-          </Slider>
-        </div>
-      </div>
-    // </div>
-  );
+			<div className='main3con'>
+				<Slider {...settings}>
+					{projects.map((project) => (
+						<Link to='/activities' key={project.id} className='frontslider'>
+							<ProjectCard
+								imgsrc={project.imgsrc}
+								cardhead={project.cardhead}
+							/>
+						</Link>
+					))}
+				</Slider>
+			</div>
+		</div>
+		// </div>
+	);
 };
 
 export default Main3;

@@ -25,9 +25,12 @@ const JoinUsForm = () => {
 		e.preventDefault();
 
 		emailjs
-			.sendForm("service_9mu97mo", "template_nmflire", form.current, {
-				publicKey: "ByY67qallsZ4slKux",
-			})
+			.sendForm(
+				"service_9mu97mo",
+				"template_nmflire",
+				form.current,
+				"ByY67qallsZ4slKux"
+			)
 			.then(
 				() => {
 					console.log("SUCCESS!");
@@ -43,7 +46,7 @@ const JoinUsForm = () => {
 
 	return (
 		<div className='mainjoinuswrap'>
-			<ToastContainer/>
+			<ToastContainer />
 			<div className='joinhead' data-aos='fade-down' data-aos-duration='500'>
 				<h1>Join Us</h1>
 				<h2>Get Involved and Help Transform Lives Today</h2>
@@ -58,7 +61,7 @@ const JoinUsForm = () => {
 				<div className='formdiv'>
 					<label htmlFor='name'>Name</label>
 
-					<input type='text' id='name' name='user_name' required />
+					<input type='text' id='name' name='from_name' required />
 				</div>
 
 				<div className='formdiv'>
