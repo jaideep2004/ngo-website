@@ -127,7 +127,7 @@ const DonationPage = () => {
 					<h1>Transform Lives with your Donation</h1>
 					<h2>
 						All donations to Life Foundation are 50% exempted under section 80G
-						of Income Tax
+						of Income Tax.
 					</h2>
 				</div>
 
