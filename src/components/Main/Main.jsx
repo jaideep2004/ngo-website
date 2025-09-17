@@ -5,6 +5,7 @@ import Main2 from "./Main2";
 import Main3 from "./Main3";
 import Main4 from "./Main4";
 import Main5 from "./Main5";
+import Main6 from "./Main6";
 
 // image slider
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -59,7 +60,30 @@ const Main = () => {
 							showIndicators={true}
 							showArrows={false}
 							showStatus={false}
-							width={1300}>
+							width={1300}
+						height={593}
+						>
+							<div className='carouselimg'>
+								<img src='./images/pb1.jpg' alt='Slide 3' style={{height: "593px"}} />
+							</div>
+							<div className='carouselimg'>
+								<img src='./images/pb2.jpg' alt='Slide 3' style={{height: "593px"}} />
+							</div>
+							<div className='carouselimg'>
+								<img src='./images/pb3.jpg' alt='Slide 3' style={{height: "593px"}} />
+							</div>
+							{/* <div className='carouselimg'>
+								<img src='./images/pb4.jpg' alt='Slide 3' style={{height: "593px"}}  />
+							</div>
+							<div className='carouselimg'>
+								<img src='./images/pb5.jpg' alt='Slide 3' style={{height: "593px"}}  />
+							</div> */}
+							<div className='carouselimg'>
+								<img src='./images/pb6.jpg' alt='Slide 3'  style={{height: "593px"}} />
+							</div>
+							{/* <div className='carouselimg'>
+								<img src='./images/pb7.jpg' alt='Slide 3' style={{height: "593px"}} />
+							</div> */}
 							<div className='carouselimg'>
 								<img src='./images/slide1.jpg' alt='Slide 1' />
 							</div>
@@ -69,6 +93,7 @@ const Main = () => {
 							<div className='carouselimg'>
 								<img src='./images/slide3.jpg' alt='Slide 3' />
 							</div>
+							
 						</Carousel>
 					</div>
 				</div>
@@ -106,6 +131,7 @@ const Main = () => {
 					/>
 				</div>
 			</div>
+			<Main6 />
 			<Main2 />
 			<Main3 />
 			<Main4 />
